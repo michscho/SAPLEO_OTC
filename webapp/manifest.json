@@ -135,6 +135,12 @@
 					"viewId": "Page2",
 					"viewLevel": 1,
 					"transition": "slide"
+				},
+				"Page1": {
+					"viewName": "Page1",
+					"viewId": "Page1",
+					"viewLevel": 1,
+					"transition": "slide"
 				}
 			},
 			"routes": [
@@ -171,6 +177,13 @@
 					"pattern": "Page2",
 					"target": [
 						"Page2"
+					]
+				},
+				{
+					"name": "Page1",
+					"pattern": "Page1",
+					"target": [
+						"Page1"
 					]
 				}
 			]

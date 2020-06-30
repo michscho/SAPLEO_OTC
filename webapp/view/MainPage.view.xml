@@ -236,7 +236,7 @@
                                                 <content>
                                                     <Title textAlign="Begin" text="Order Items (1)"/>
                                                     <ToolbarSpacer/>
-                                                    <Button text="Invoice Detail View" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                                                    <Button text="Invoice Detail View" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" id="invoiceButton" press="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'press':\{'navigation':\{'routeName':'Page1'\}\}\}"/>
                                                     <SegmentedButton>
                                                         <items>
                                                             <SegmentedButtonItem icon="sap-icon://show"/>
