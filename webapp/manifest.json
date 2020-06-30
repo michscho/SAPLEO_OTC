@@ -124,7 +124,6 @@
 					"transition": "slide"
 				},
 				"UploadQuotation": {
-					"controlAggregation": "pages",
 					"viewName": "UploadQuotation",
 					"viewId": "UploadQuotation",
 					"viewLevel": 1,
@@ -166,7 +165,7 @@
 					]
 				},
 				{
-					"pattern": "UploadQuotation/:context:",
+					"pattern": "UploadQuotation",
 					"name": "UploadQuotation",
 					"target": [
 						"UploadQuotation"

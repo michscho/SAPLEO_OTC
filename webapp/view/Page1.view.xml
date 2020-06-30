@@ -1,4 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.Page1" xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.build.standard.otcOptimization.controller.Page1">
     <Page showHeader="true" title="Inquiry" showFooter="true" showNavButton="false">
         <content>
             <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
@@ -1251,7 +1251,7 @@
             <OverflowToolbar width="100%" design="Transparent" visible="true" enabled="true">
                 <content>
                     <ToolbarSpacer width=""/>
-                    <Button text="Upload new inquiry" type="Default" icon="sap-icon://upload-to-cloud" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Upload new inquiry" type="Default" icon="sap-icon://upload-to-cloud" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" id="inquiry" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'UploadQuotation'\}\}\}"/>
                 </content>
             </OverflowToolbar>
         </content>
