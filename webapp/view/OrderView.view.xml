@@ -1,0 +1,341 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.OrderView" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="false" showHeaderContent="true" showEditHeaderButton="false" showFooter="false" class="sapUiSizeCompact">
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader objectTitle="{Number}" objectSubtitle="{path: 'Date', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" showPlaceholder="true" objectImageURI="/build/uilibraries/content/static/image-canvas.svg">
+                <uxap:navigationBar>
+                    <Bar>
+                        <contentLeft>
+                            <Button type="Back" press="_onFioriObjectPageHeaderPress"/>
+                        </contentLeft>
+                        <contentMiddle>
+                            <Title text="{ID}"/>
+                        </contentMiddle>
+                        <contentRight/>
+                    </Bar>
+                </uxap:navigationBar>
+                <uxap:actions>
+                    <Button text="Edit" iconFirst="false" type="Emphasized" enabled="true">
+                        <layoutData>
+                            <OverflowToolbarLayoutData moveToOverflow="true"/>
+                        </layoutData>
+                    </Button>
+                    <Button text="Delete" iconFirst="false" type="Transparent" enabled="true">
+                        <layoutData>
+                            <OverflowToolbarLayoutData moveToOverflow="true"/>
+                        </layoutData>
+                    </Button>
+                    <Button text="" icon="sap-icon://action" iconFirst="true" type="Transparent" enabled="true">
+                        <layoutData>
+                            <OverflowToolbarLayoutData moveToOverflow="true"/>
+                        </layoutData>
+                    </Button>
+                </uxap:actions>
+                <uxap:breadCrumbsLinks/>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:headerContent>
+            <VBox>
+                <items>
+                    <Title text="Value:"/>
+                    <ObjectNumber number="" unit="{path: 'OrderItem/NetAmount', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" state="None"/>
+                </items>
+            </VBox>
+            <VBox>
+                <items>
+                    <Title text="Order Number" margin-right="0.5rem"/>
+                    <Link text="{Number}" class="sapMTitleStyleH2" press="_onFioriObjectPageHeaderContactPress">
+                        <dependents>
+                            <QuickView placement="Auto">
+                                <pages>
+                                    <QuickViewPage header="Contact Information" icon="sap-icon://person-placeholder" title="{Number}" description="">
+                                        <groups>
+                                            <QuickViewGroup heading="Contact Details">
+                                                <elements>
+                                                    <QuickViewGroupElement label="Job Title" type="text" value="Developer" visible="true"/>
+                                                    <QuickViewGroupElement label="Department" type="text" value="" visible="false"/>
+                                                    <QuickViewGroupElement label="Email" type="email" value="" visible="false"/>
+                                                    <QuickViewGroupElement label="Phone" type="phone" value="" visible="false"/>
+                                                    <QuickViewGroupElement label="Mobile" type="mobile" value="" visible="false"/>
+                                                    <QuickViewGroupElement label="Fax" type="text" value="" visible="false"/>
+                                                </elements>
+                                            </QuickViewGroup>
+                                        </groups>
+                                    </QuickViewPage>
+                                </pages>
+                            </QuickView>
+                        </dependents>
+                    </Link>
+                </items>
+            </VBox>
+            <VBox>
+                <items>
+                    <Title text="Header Form"/>
+                    <HBox>
+                        <items>
+                            <Label text="SenderAddress"/>
+                            <Label text=":" class="sapUiTinyMarginEnd"/>
+                            <ObjectStatus text="{Sender/Address}"/>
+                        </items>
+                    </HBox>
+                    <HBox>
+                        <items>
+                            <Label text="Sender Name"/>
+                            <Label text=":" class="sapUiTinyMarginEnd"/>
+                            <Text text="{Sender/Name}" class="sapUiTinyMarginEnd"/>
+                            <Text text="("/>
+                            <Text text="423432"/>
+                            <Text text=")"/>
+                        </items>
+                    </HBox>
+                    <HBox>
+                        <items>
+                            <Label text="ID"/>
+                            <Label text=":" class="sapUiTinyMarginEnd"/>
+                            <Link text="{ID}" press="_onFioriObjectPageHeaderFormContactPress">
+                                <dependents>
+                                    <QuickView placement="Auto">
+                                        <pages>
+                                            <QuickViewPage header="Contact Information" icon="sap-icon://person-placeholder" title="{ID}" description="">
+                                                <groups>
+                                                    <QuickViewGroup heading="Contact Details">
+                                                        <elements>
+                                                            <QuickViewGroupElement label="Job Title" type="text" value="Developer" visible="true"/>
+                                                            <QuickViewGroupElement label="Department" type="text" value="" visible="false"/>
+                                                            <QuickViewGroupElement label="Email" type="email" value="" visible="false"/>
+                                                            <QuickViewGroupElement label="Phone" type="phone" value="" visible="false"/>
+                                                            <QuickViewGroupElement label="Mobile" type="mobile" value="" visible="false"/>
+                                                            <QuickViewGroupElement label="Fax" type="text" value="" visible="false"/>
+                                                        </elements>
+                                                    </QuickViewGroup>
+                                                </groups>
+                                            </QuickViewPage>
+                                        </pages>
+                                    </QuickView>
+                                </dependents>
+                            </Link>
+                        </items>
+                    </HBox>
+                </items>
+            </VBox>
+        </uxap:headerContent>
+        <uxap:sections>
+            <uxap:ObjectPageSection title="General">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="General">
+                        <uxap:blocks>
+                            <layout:Grid defaultSpan="XL12 L12 M12 S12">
+                                <layout:content>
+                                    <form:Form>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout labelSpanXL="12" labelSpanL="12" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="4" columnsL="3" columnsM="2" singleContainerFullSize="false"/>
+                                        </form:layout>
+                                        <form:formContainers>
+                                            <form:FormContainer title="Receiver">
+                                                <form:formElements>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Name" required="true"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectStatus text="{Receiver/Name}"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Address" required="true"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectStatus text="{Receiver/Address}"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                    </form:Form>
+                                </layout:content>
+                            </layout:Grid>
+                            <layout:Grid defaultSpan="XL12 L12 M12 S12">
+                                <layout:content>
+                                    <form:Form>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout labelSpanXL="12" labelSpanL="12" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="4" columnsL="3" columnsM="2" singleContainerFullSize="false"/>
+                                        </form:layout>
+                                        <form:formContainers>
+                                            <form:FormContainer title="Sender">
+                                                <form:formElements>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Name" required="true"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectStatus text="{Sender/Name}"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Address" required="true"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectStatus text="{Sender/Address}"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="senderBankAccount" required="false"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectStatus text="{Sender/BankAccount}"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                    </form:Form>
+                                </layout:content>
+                            </layout:Grid>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="Details Section">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Details Section">
+                        <uxap:blocks>
+                            <layout:Grid defaultSpan="XL12 L12 M12 S12">
+                                <layout:content>
+                                    <form:Form>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout labelSpanXL="12" labelSpanL="12" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="4" columnsL="3" columnsM="2" singleContainerFullSize="false"/>
+                                        </form:layout>
+                                        <form:formContainers>
+                                            <form:FormContainer title="Amount">
+                                                <form:formElements>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="TaxRate" required="false"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectStatus text="{path: 'Amount/TaxRate', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Net Amount" required="false"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectStatus text="{path: 'Amount/NetAmounts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Gross Amounts" required="false"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectStatus text="{path: 'Amount/GrossAmounts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                    </form:Form>
+                                </layout:content>
+                            </layout:Grid>
+                            <layout:Grid defaultSpan="XL12 L12 M12 S12">
+                                <layout:content>
+                                    <form:Form>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout labelSpanXL="12" labelSpanL="12" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="4" columnsL="3" columnsM="2" singleContainerFullSize="false"/>
+                                        </form:layout>
+                                        <form:formContainers>
+                                            <form:FormContainer title="Order Details">
+                                                <form:formElements>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Purchase Order Number" required="false"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectStatus text="{Details/PurchaseOrderNumber}"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement>
+                                                        <form:label>
+                                                            <Label text="Payment Terms" required="false"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <ObjectStatus text="{Payment/Terms}"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                    </form:Form>
+                                </layout:content>
+                            </layout:Grid>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="LineItems Section">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="LineItems Section">
+                        <uxap:blocks>
+                            <Table width="100%" growing="true" growingScrollToLoad="true" growingThreshold="25" mode="None" items="{path:'/OrderItemSet', templateShareable:true}">
+                                <headerToolbar>
+                                    <OverflowToolbar design="Transparent">
+                                        <content>
+                                            <ToolbarSpacer/>
+                                            <Button icon="sap-icon://action-settings" type="Transparent">
+                                                <layoutData>
+                                                    <OverflowToolbarLayoutData moveToOverflow="true"/>
+                                                </layoutData>
+                                            </Button>
+                                        </content>
+                                    </OverflowToolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" minScreenWidth="Phone">
+                                        <header>
+                                            <Text text="Description" width="auto"/>
+                                        </header>
+                                    </Column>
+                                    <Column width="auto" minScreenWidth="Tablet" demandPopin="true">
+                                        <header>
+                                            <Text text="Quantity" width="auto"/>
+                                        </header>
+                                    </Column>
+                                    <Column width="auto" hAlign="Right" minScreenWidth="Phone">
+                                        <header>
+                                            <Text text="NetAmount" width="auto"/>
+                                        </header>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Active">
+                                        <cells>
+                                            <ObjectIdentifier title="{ID}" text="{Description}"/>
+                                            <ObjectStatus text="{path: 'Quantity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}"/>
+                                            <HBox alignItems="Stretch" justifyContent="End" alignContent="Stretch">
+                                                <items>
+                                                    <ObjectNumber number="{path:'NetAmount', formatter:'.formatFractionDigitFromValue'}" unit="{path: 'UnitPrice', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" emphasized="false"/>
+                                                </items>
+                                            </HBox>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+        <uxap:footer>
+            <OverflowToolbar design="auto">
+                <content>
+                    <ToolbarSpacer/>
+                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </uxap:footer>
+    </uxap:ObjectPageLayout>
+</mvc:View>
