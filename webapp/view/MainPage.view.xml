@@ -111,7 +111,7 @@
                                 <items>
                                     <HBox alignItems="Center" justifyContent="SpaceBetween" alignContent="Stretch" width="20rem" class="sapUiSmallMargin">
                                         <items>
-                                            <Label text="% of automated Quotations" required="false"/>
+                                            <Label text="% of automated Inquiry" required="false"/>
                                             <Button icon="sap-icon://slim-arrow-down" type="Transparent"/>
                                         </items>
                                     </HBox>
@@ -251,13 +251,13 @@
                                         <columns>
                                             <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
                                                 <header>
-                                                    <Text text="DocumentDate" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                    <Text text="Document Date" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                                 </header>
                                                 <footer/>
                                             </Column>
                                             <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
                                                 <header>
-                                                    <Text text="DocumentNumber" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                    <Text text="Document Number" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                                 </header>
                                                 <footer/>
                                             </Column>
@@ -287,7 +287,7 @@
                                             </Column>
                                             <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
                                                 <header>
-                                                    <Text text="ItemDescription" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                    <Text text="Item Description" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                                 </header>
                                                 <footer/>
                                             </Column>
@@ -299,7 +299,7 @@
                                             </Column>
                                             <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
                                                 <header>
-                                                    <Text text="NetAmount" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                    <Text text="Net Amount" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                                 </header>
                                                 <footer/>
                                             </Column>

@@ -5,12 +5,12 @@
                 <items>
                     <IconTabFilter icon="" iconColor="Default" text="All" count="123" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
                         <content>
-                            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
+                            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="tSAPLEO_OTC/webapp/viewrue" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
                                 <infoToolbar/>
                                 <headerToolbar>
                                     <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
                                         <content>
-                                            <Text text="Work Items (" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="All Requests (" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                             <Text text="123" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                             <Text text=")" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                             <ToolbarSpacer width=""/>
@@ -22,7 +22,7 @@
                                     </OverflowToolbar>
                                 </headerToolbar>
                                 <columns>
-                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="ture" popinDisplay="Inline" mergeDuplicates="false">
                                         <header>
                                             <Text text="Document Number" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                         </header>
@@ -66,7 +66,7 @@
                                     </Column>
                                 </columns>
                                 <items>
-                                    <ColumnListItem type="Navigation" press="_onRowPress">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="27654398633567" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="GG-91 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -77,7 +77,7 @@
                                             <ObjectNumber number="2387.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="17354628935672" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="RO-01 Undefined" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -88,7 +88,7 @@
                                             <ObjectNumber number="12765.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10243568365493" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -99,7 +99,7 @@
                                             <ObjectNumber number="3672.92" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10243568365493" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -110,7 +110,7 @@
                                             <ObjectNumber number="2134.25" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="18453874392765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -121,7 +121,7 @@
                                             <ObjectNumber number="45238.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="12984537369562" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -132,7 +132,7 @@
                                             <ObjectNumber number="1245.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="65478345628463" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -143,7 +143,7 @@
                                             <ObjectNumber number="432.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="12964763846534" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -154,7 +154,7 @@
                                             <ObjectNumber number="346.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="14563764387456" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -165,7 +165,7 @@
                                             <ObjectNumber number="8354.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="15975364375839" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -176,7 +176,7 @@
                                             <ObjectNumber number="1324.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -187,7 +187,7 @@
                                             <ObjectNumber number="21345.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34624246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -198,7 +198,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -209,7 +209,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -220,7 +220,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -231,7 +231,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34624246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -242,7 +242,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -253,7 +253,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -264,7 +264,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -275,7 +275,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34624246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -286,7 +286,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -297,7 +297,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -312,7 +312,7 @@
                             </Table>
                         </content>
                     </IconTabFilter>
-                    <IconTabFilter icon="" iconColor="Default" text="Completed" count="50" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                    <IconTabFilter icon="" iconColor="Default" text="Automated" count="50" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
                         <content>
                             <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
                                 <infoToolbar/>
@@ -375,7 +375,7 @@
                                     </Column>
                                 </columns>
                                 <items>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="23762348763956" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -386,7 +386,7 @@
                                             <ObjectNumber number="765.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10437652876453" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Regular Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -397,7 +397,7 @@
                                             <ObjectNumber number="1123.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="56729183674567" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Regular returns of material" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -408,7 +408,7 @@
                                             <ObjectNumber number="2345.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="45182345672398" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -419,7 +419,7 @@
                                             <ObjectNumber number="345.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10345627345982" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -430,7 +430,7 @@
                                             <ObjectNumber number="129.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10645375234152" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -441,7 +441,7 @@
                                             <ObjectNumber number="12345.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34256784563231" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -452,7 +452,7 @@
                                             <ObjectNumber number="2876.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10234574856783" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -463,7 +463,7 @@
                                             <ObjectNumber number="4537.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223452678345" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -474,7 +474,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10234876453627" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -485,7 +485,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34526724598345" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -496,7 +496,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10234567231953" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -507,7 +507,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10234635426734" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -518,7 +518,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10235675846734" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -529,7 +529,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="23567183498765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -540,7 +540,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10342567456178" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -551,7 +551,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10345265436784" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -562,7 +562,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -573,7 +573,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -584,7 +584,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34624246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -595,7 +595,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -606,7 +606,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -621,7 +621,7 @@
                             </Table>
                         </content>
                     </IconTabFilter>
-                    <IconTabFilter icon="" iconColor="Default" text="In Progress" count="50" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                    <IconTabFilter icon="" iconColor="Default" text="Manuel" count="50" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
                         <content>
                             <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
                                 <infoToolbar/>
@@ -684,7 +684,7 @@
                                     </Column>
                                 </columns>
                                 <items>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="27654398633567" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="GG-91 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -695,7 +695,7 @@
                                             <ObjectNumber number="2387.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="17354628935672" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="RO-01 Undefined" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -706,7 +706,7 @@
                                             <ObjectNumber number="12765.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10243568365493" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -717,7 +717,7 @@
                                             <ObjectNumber number="3672.92" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10243568365493" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -728,7 +728,7 @@
                                             <ObjectNumber number="2134.25" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="18453874392765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -739,7 +739,7 @@
                                             <ObjectNumber number="45238.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="12984537369562" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -750,7 +750,7 @@
                                             <ObjectNumber number="1245.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="65478345628463" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -761,7 +761,7 @@
                                             <ObjectNumber number="432.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="12964763846534" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -772,7 +772,7 @@
                                             <ObjectNumber number="346.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="14563764387456" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -783,7 +783,7 @@
                                             <ObjectNumber number="8354.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="15975364375839" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -794,7 +794,7 @@
                                             <ObjectNumber number="1324.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -805,7 +805,7 @@
                                             <ObjectNumber number="21345.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34624246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -816,7 +816,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -827,7 +827,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -838,7 +838,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -849,7 +849,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34624246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -860,7 +860,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -871,7 +871,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -882,7 +882,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -893,7 +893,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34624246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -904,7 +904,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -915,7 +915,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -930,7 +930,7 @@
                             </Table>
                         </content>
                     </IconTabFilter>
-                    <IconTabFilter icon="" iconColor="Default" text="Errors" count="23" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                    <IconTabFilter icon="" iconColor="Default" text="Manuel work needed" count="23" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
                         <content>
                             <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
                                 <infoToolbar>
@@ -999,7 +999,7 @@
                                     </Column>
                                 </columns>
                                 <items>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882001820" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1010,7 +1010,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882001820" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Regular Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1021,7 +1021,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882001820" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Regular returns of material" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1032,7 +1032,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1043,7 +1043,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34624246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1054,7 +1054,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1065,7 +1065,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1076,7 +1076,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34624246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1087,7 +1087,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1098,7 +1098,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1109,7 +1109,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1120,7 +1120,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34624246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1131,7 +1131,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1142,7 +1142,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1153,7 +1153,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="65398882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1164,7 +1164,7 @@
                                             <ObjectNumber number="12897.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="14523246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1175,7 +1175,7 @@
                                             <ObjectNumber number="234197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1186,7 +1186,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="31546286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1197,7 +1197,7 @@
                                             <ObjectNumber number="665.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="10223882003434" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="A-B45 Revoked on delivery" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1208,7 +1208,7 @@
                                             <ObjectNumber number="1997.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="34624246524426" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1219,7 +1219,7 @@
                                             <ObjectNumber number="8197.00" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
@@ -1230,7 +1230,7 @@
                                             <ObjectNumber number="11865.99" unit="EUR" emphasized="true" state="None"/>
                                         </cells>
                                     </ColumnListItem>
-                                    <ColumnListItem type="Navigation">
+                                    <ColumnListItem>
                                         <cells>
                                             <Link text="37987286725765" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                             <Text text="Random Check" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
