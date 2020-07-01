@@ -281,12 +281,6 @@
                                             </Column>
                                             <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
                                                 <header>
-                                                    <Text text="Purchase Order Number" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                                </header>
-                                                <footer/>
-                                            </Column>
-                                            <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                                                <header>
                                                     <Text text="Item Description" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                                 </header>
                                                 <footer/>
@@ -312,7 +306,6 @@
                                                     <Link text="{Sender/Name}" textAlign="Begin" width="auto" target="_blank" wrapping="true" enabled="true" visible="true" emphasized="false" subtle="false"/>
                                                     <ObjectNumber number="{Receiver/Name}" unit="{Details/PurchaseOrderNumber}" emphasized="true" state="None"/>
                                                     <Link href="{Receiver/Address}" text="{Receiver/Address}" textAlign="Begin" width="auto" target="_blank" wrapping="true" enabled="true" visible="true" emphasized="false" subtle="false"/>
-                                                    <Text text="{Payment/Terms}" width="100px" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                                     <Text text="{OrderItem/Description}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                                     <ObjectNumber number="{path: 'OrderItem/Quantity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" unit="EA" emphasized="true" state="None"/>
                                                     <ObjectNumber number="{path: 'OrderItem/NetAmount', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" unit="USD" emphasized="true" state="None"/>
