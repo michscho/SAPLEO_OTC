@@ -1,3 +1,108 @@
+/**
+ * Configuration to what to expect from to document extraction job of SAP
+ * HeaderFields to find (array)
+ * LineItemsFields
+ * Client to save
+ * Enrichment specifies which configuration and ML to use
+ */
+// @ts-ignore
+var jsonData = {
+    extraction: {
+        headerFields: [
+            "documentNumber",
+            "taxId",
+            "taxName",
+            "purchaseOrderNumber",
+            "shippingAmount",
+            "netAmount",
+            "senderAddress",
+            "senderName",
+            "grossAmount",
+            "currencyCode",
+            "receiverContact",
+            "documentDate",
+            "taxAmount",
+            "taxRate",
+            "receiverName",
+            "receiverAddress",
+            "deliveryDate",
+            "paymentTerms",
+            "shipToAddress",
+            "deliveryNoteNumber",
+            "senderBankAccount"
+        ],
+        lineItemFields: [
+            "description",
+            "netAmount",
+            "quantity",
+            "unitPrice",
+            "materialNumber",
+            "documentNumber",
+            "documentDate",
+            "discountAmount",
+            "deductionAmount",
+            "itemNumber"
+        ]
+    },
+    clientId: "c_00",
+    documentType: "invoice",
+    receivedDate: "2020-02-17",
+    enrichment: {
+        sender: {
+            top: 5,
+            type: "businessEntity",
+            subtype: "supplier"
+        },
+        employee: {
+            type: "employee"
+        }
+    }
+};
+
+/**
+ * To send a pdf to SAP Document Extraction you need to send them as form data
+ * @param pdfData - Formdata with body and binary pdf
+ */
+async function postDocument(pdfData) {
+    let response = await getToken();
+    axios({
+        url: jobsUrl,
+        method: 'post',
+        headers: {
+            Authorization: "Bearer " + response.data.access_token,
+            'Content-Type': 'multipart/form-data',
+            'Accept': 'application/json'
+        },
+        data: pdfData
+    })
+        .then(response => {
+        console.log(response);
+    })
+        .catch(error => {
+            console.log(error)
+        });
+}
+
+/**
+ * Getting response of Document
+ */
+async function fetchDocument() {
+    let response = await getToken();
+    const id = '/762cf44d-9310-4d06-bcae-53dd3e82667e';
+    return axios({
+        url: jobsUrl + id,
+        method: 'get',
+        headers: {
+            Authorization: "Bearer " + response.data.access_token,
+            "Access-Control-Allow-Origin": "*"
+        },
+        params: {
+            clientId: 'c_00',
+        }
+    });
+}
+
+
 sap.ui.define([
 	"jquery.sap.global",
 	"sap/base/util/deepExtend",
@@ -89,6 +194,12 @@ sap.ui.define([
 
 		onChange: function(oEvent) {
 			var oUploadCollection = oEvent.getSource();
+			console.log("HERE");
+			var data = new FormData();
+        	data.append('file', oEvent.getParameter('files')[0], oEvent.getParameter('files')[0].fileName);
+        	data.append("options", JSON.stringify(jsonData));
+        	postDocument(data);
+			console.log(data);
 			// Header Token
 			var oCustomerHeaderToken = new UploadCollectionParameter({
 				name: "x-csrf-token",

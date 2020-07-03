@@ -1,10 +1,102 @@
+
+/**
+ * TOKEN DATA
+ * Url with Params
+ */
+var baseUrl = "https://otc.authentication.eu10.hana.ondemand.com/oauth/token?grant_type=client_credentials";
+/**
+ * SAP Client ID to verify our requests.
+ */
+var clientID = "sb-409d575f-6af5-42d2-9e77-6f92b0e702d3!b50035|na-9e50499f-78dd-40ca-ad8d-60acf02cff8b!b30417";
+var clientSecret = "YGw1AB6Rsvzpyf/Vtnfu3VFBJFQ=";
+var responseType = "token";
+var contentType = "application";
+
+/**
+ * CLIENT DATA
+ * Configure Url and body to send
+ * More information: https://aiservices-trial-dox.cfapps.eu10.hana.ondemand.com/document-information-extraction/v1
+ */
+var clientUrl = "https://aiservices-trial-dox.cfapps.eu10.hana.ondemand.com/document-information-extraction/v1/clients";
+var body = {
+    "value": [
+        {
+            "clientId": "c_00",
+            "clientName": "client 01"
+        }
+    ]
+};
+
+/**
+ * JOBS DATA
+ * More information: https://aiservices-trial-dox.cfapps.eu10.hana.ondemand.com/document-information-extraction/v1
+ */
+var jobsUrl = "https://aiservices-trial-dox.cfapps.eu10.hana.ondemand.com/document-information-extraction/v1/document/jobs";
+
+
+/**
+ * SAP needs Token which are valid for 24 hours to make requests
+ * After 24 hours we needs to refresh them
+ */
+async function getToken() {
+    return axios({
+        url: baseUrl,
+        method: 'get',
+        auth: {
+            username: clientID,
+            password: clientSecret
+        },
+        params: {
+            response_type: responseType,
+            content_type: contentType
+        },
+        header: {
+            'Content-type': 'application/form-url-encode'
+        }
+    });
+}
+
+/**
+ * Normally you need to create Clients and get them
+ * In trial we only can create one Client
+ */
+async function createClient() {
+    let response = await getToken();
+    return axios({
+        url: clientUrl,
+        method: 'post',
+        headers: {
+            Authorization: "Bearer " + response.data.access_token,
+            "Access-Control-Allow-Origin": "*"
+        },
+        data: body
+    });
+}
+
+/**
+ * Get a list of 10 clients
+ */
+async function getAllClients() {
+    let response = await getToken()
+    //console.log(response.data.access_token);
+    return axios({
+        url: clientUrl + "?limit=10",
+        method: 'get',
+        headers: {
+            Authorization: "Bearer " + response.data.access_token
+        }
+    });
+}
+
 sap.ui.define([
 		"sap/ui/core/mvc/Controller",
 		"sap/m/MessageBox",
 		"./utilities",
-		"sap/ui/core/routing/History"
+		"sap/ui/core/routing/History",
 	], function (BaseController, MessageBox, Utilities, History) {
 		"use strict";
+		console.log("HERE");
+		getAllClients();
 		return BaseController.extend("com.sap.build.standard.otcOptimization.controller.MainPage", {
 			handleRouteMatched: function (oEvent) {
 				var sAppId = "App5ef88d3ac4b6e55edf3b6ee0";
@@ -337,6 +429,7 @@ sap.ui.define([
 				};
 			},
 			onInit: function () {
+				getToken();
 				this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				this.oRouter.getTarget("MainPage").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
 				var oView = this.getView();

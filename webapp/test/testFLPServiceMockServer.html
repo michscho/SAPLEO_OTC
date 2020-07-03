@@ -4,6 +4,11 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta charset="UTF-8">
+		<!-- 
+		Axios - Framework for REST Requests
+		see: https://www.npmjs.com/package/axios
+		--> 
+		     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		 
 			<script type="text/javascript">
 				window["sap-ushell-config"] = {
@@ -43,8 +48,6 @@
 			data-sap-ui-resourceroots='{"com.sap.build.standard.otcOptimization":"../"}'>
 		</script>
 
-     
-
 		<script type="text/javascript">
         		sap.ui.getCore().attachInit(function() {
         	        //Fake LREP
@@ -53,6 +56,7 @@
 
         	        
         				
+     
         				sap.ui.require([
         					"com/sap/build/standard/otcOptimization/localService/mockserver"
         				], function (server) {

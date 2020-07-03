@@ -15,7 +15,7 @@
             mode="SingleSelectMaster" 
             class="sapUiSmallMargin" 
             uploadComplete="_onUploadCollectionUploadComplete" 
-            change="_onUploadCollectionChange" 
+            change="onChange" 
             typeMissmatch="_onUploadCollectionTypeMissmatch" 
             fileSizeExceed="_onUploadCollectionFileSizeExceed"
             numberOfAttachmentsText="Uploaded items"
