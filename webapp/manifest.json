@@ -53,9 +53,15 @@
 		"dependencies": {
 			"minUI5Version": "1.50.0",
 			"libs": {
-				"sap.ui.core": {},
+				"sap.chart": {
+					"minVersion": ""
+				},
 				"sap.m": {},
-				"sap.ui.layout": {}
+				"sap.ui.core": {},
+				"sap.ui.layout": {},
+				"sap.viz": {
+					"minVersion": ""
+				}
 			}
 		},
 		"config": {
@@ -94,7 +100,7 @@
 		},
 		"resources": {
 			"css": []
-			},
+		},
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",

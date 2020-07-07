@@ -116,6 +116,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			oData["sap_Responsive_Page_0-content-sap_chart_LineChart-1593455241479"]["data"] = [{
 				"dim0": "Februar",
 				"mea0": "25",
+				"mea0" : "26",
 				"Week": "55",
 				"Month": "80",
 				"__id": 0
