@@ -51,7 +51,7 @@
                 </f:content>
                 <f:actions>
                     <ToolbarSpacer/>
-                    <Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="KPI Detail View" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Page2'\}\},'tap':\{'navigation':\{'routeName':'Page2'\}\}\}" tap="action" id="button"/>
+                    <Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="KPI Detail View" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" action:wiring="\{'tap':\{'navigation':\{'routeName':'KpiOverview'\}\},'press':\{'navigation':\{'routeName':'KpiOverview'\}\}\}" tap="action" id="button" press="action"/>
                     <OverflowToolbarButton icon="sap-icon://action" type="Transparent" tooltip="Share" visible="true" text="Share">
                         <layoutData>
                             <OverflowToolbarLayoutData closeOverflowOnInteraction="false" priority="High"/>
@@ -236,7 +236,7 @@
                                                 <content>
                                                     <Title textAlign="Begin" text="Order Items (1)"/>
                                                     <ToolbarSpacer/>
-                                                    <Button text="Inquery Detail View" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" id="invoiceButton" press="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'press':\{'navigation':\{'routeName':'Page1'\}\}\}"/>
+                                                    <Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Inquery Detail View" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" id="invoiceButton" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Page1'\}\}\}"/>
                                                     <SegmentedButton>
                                                         <items>
                                                             <SegmentedButtonItem icon="sap-icon://show"/>

@@ -1,4 +1,3 @@
-
 /**
  * TOKEN DATA
  * Url with Params
@@ -19,12 +18,10 @@ var contentType = "application";
  */
 var clientUrl = "https://aiservices-trial-dox.cfapps.eu10.hana.ondemand.com/document-information-extraction/v1/clients";
 var body = {
-    "value": [
-        {
-            "clientId": "c_00",
-            "clientName": "client 01"
-        }
-    ]
+	"value": [{
+		"clientId": "c_00",
+		"clientName": "client 01"
+	}]
 };
 
 /**
@@ -33,27 +30,26 @@ var body = {
  */
 var jobsUrl = "https://aiservices-trial-dox.cfapps.eu10.hana.ondemand.com/document-information-extraction/v1/document/jobs";
 
-
 /**
  * SAP needs Token which are valid for 24 hours to make requests
  * After 24 hours we needs to refresh them
  */
 async function getToken() {
-    return axios({
-        url: baseUrl,
-        method: 'get',
-        auth: {
-            username: clientID,
-            password: clientSecret
-        },
-        params: {
-            response_type: responseType,
-            content_type: contentType
-        },
-        header: {
-            'Content-type': 'application/form-url-encode'
-        }
-    });
+	return axios({
+		url: baseUrl,
+		method: 'get',
+		auth: {
+			username: clientID,
+			password: clientSecret
+		},
+		params: {
+			response_type: responseType,
+			content_type: contentType
+		},
+		header: {
+			'Content-type': 'application/form-url-encode'
+		}
+	});
 }
 
 /**
@@ -61,31 +57,31 @@ async function getToken() {
  * In trial we only can create one Client
  */
 async function createClient() {
-    let response = await getToken();
-    return axios({
-        url: clientUrl,
-        method: 'post',
-        headers: {
-            Authorization: "Bearer " + response.data.access_token,
-            "Access-Control-Allow-Origin": "*"
-        },
-        data: body
-    });
+	let response = await getToken();
+	return axios({
+		url: clientUrl,
+		method: 'post',
+		headers: {
+			Authorization: "Bearer " + response.data.access_token,
+			"Access-Control-Allow-Origin": "*"
+		},
+		data: body
+	});
 }
 
 /**
  * Get a list of 10 clients
  */
 async function getAllClients() {
-    let response = await getToken()
-    //console.log(response.data.access_token);
-    return axios({
-        url: clientUrl + "?limit=10",
-        method: 'get',
-        headers: {
-            Authorization: "Bearer " + response.data.access_token
-        }
-    });
+	let response = await getToken()
+		//console.log(response.data.access_token);
+	return axios({
+		url: clientUrl + "?limit=10",
+		method: 'get',
+		headers: {
+			Authorization: "Bearer " + response.data.access_token
+		}
+	});
 }
 
 sap.ui.define([

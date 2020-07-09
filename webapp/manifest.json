@@ -135,9 +135,9 @@
 					"viewLevel": 1,
 					"transition": "slide"
 				},
-				"Page2": {
-					"viewName": "Page2",
-					"viewId": "Page2",
+				"KpiOverview": {
+					"viewName": "KpiOverview",
+					"viewId": "KpiOverview",
 					"viewLevel": 1,
 					"transition": "slide"
 				},
@@ -178,17 +178,17 @@
 					]
 				},
 				{
-					"name": "Page2",
-					"pattern": "Page2",
-					"target": [
-						"Page2"
-					]
-				},
-				{
 					"name": "Page1",
 					"pattern": "Page1",
 					"target": [
 						"Page1"
+					]
+				},
+				{
+					"name": "KpiOverview",
+					"pattern": "KpiOverview",
+					"target": [
+						"KpiOverview"
 					]
 				}
 			]

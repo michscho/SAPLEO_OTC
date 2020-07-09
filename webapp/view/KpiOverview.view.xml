@@ -1,0 +1,277 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.KpiOverview" xmlns="sap.m" xmlns:chart="sap.chart" xmlns:data="sap.chart.data">
+    <Page showHeader="true" title="KPI" showFooter="true" showNavButton="false">
+        <content>
+            <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <items>
+                    <IconTabFilter icon="sap-icon://hint" iconColor="Default" text="Day" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Panel height="auto" width="1275px" headerText="Time" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <Panel height="auto" width="1259px" headerText="Total Time Automized in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276706239-content-sap_m_Panel-1-content-sap_chart_LineChart-1" width="1236px" height="450px" visibleDimensions="__id" visibleMeasures="Total Time Automized" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276706239-content-sap_m_Panel-1-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Day" role="category" textProperty="Day"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Total Time Automized" label="Total Time Automized in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                    <Panel height="auto" width="1259px" headerText="Average Time Saved in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276706239-content-sap_m_Panel-2-content-sap_chart_LineChart-1" width="100%" height="450px" visibleDimensions="__id" visibleMeasures="Average Time Saved" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276706239-content-sap_m_Panel-2-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Day" role="category" textProperty="Day"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Average Time Saved" label="Average Time Saved in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                </content>
+                            </Panel>
+                            <Panel height="auto" width="100%" headerText="Error Rate" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <Panel height="auto" width="100%" headerText="Human Error Rate in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276761573-content-sap_m_Panel-1-content-sap_chart_LineChart-1" width="1216px" height="450px" visibleDimensions="__id" visibleMeasures="Error Rate" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276761573-content-sap_m_Panel-1-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Day" role="category" textProperty="Day"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Error Rate" label="Error Rate in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                    <Panel height="auto" width="100%" headerText="Machine Error Rate in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276761573-content-sap_m_Panel-2-content-sap_chart_LineChart-1" width="1200px" height="450px" visibleDimensions="__id" visibleMeasures="Error Rate in %" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276761573-content-sap_m_Panel-2-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Day" role="category" textProperty="Day"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Error Rate in %" label="Error Rate in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                </content>
+                            </Panel>
+                            <Panel height="auto" width="100%" headerText="Cost Saving in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276828403-content-sap_chart_LineChart-1" width="100%" height="450px" visibleDimensions="__id" visibleMeasures="Cost Saving" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276828403-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                        <chart:dimensions>
+                                            <data:Dimension name="__id" label="Day" role="category" textProperty="Day"/>
+                                        </chart:dimensions>
+                                        <chart:measures>
+                                            <data:Measure name="Cost Saving" label="Cost Saving in %" role="axis2"/>
+                                        </chart:measures>
+                                    </chart:Chart>
+                                </content>
+                            </Panel>
+                            <Panel height="auto" width="100%" headerText="Average Productivity in Minutes" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594281919705-content-sap_chart_LineChart-1" width="1262px" height="450px" visibleDimensions="__id" visibleMeasures="Average Productivity" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594281919705-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                        <chart:dimensions>
+                                            <data:Dimension name="__id" label="Day" role="category" textProperty="Day"/>
+                                        </chart:dimensions>
+                                        <chart:measures>
+                                            <data:Measure name="Average Productivity" label="Average Productivity in Minutes" role="axis2"/>
+                                        </chart:measures>
+                                    </chart:Chart>
+                                </content>
+                            </Panel>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://appointment" iconColor="Default" text="Week" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Panel height="auto" width="1275px" headerText="Time" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <Panel height="auto" width="1259px" headerText="Total Time Automized in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276726549-content-sap_m_Panel-1-content-sap_chart_LineChart-1" width="1236px" height="450px" visibleDimensions="__id" visibleMeasures="Total Time Automized" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276726549-content-sap_m_Panel-1-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Week" role="category" textProperty="Week"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Total Time Automized" label="Total Time Automized in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                    <Panel height="auto" width="1259px" headerText="Average Time Saved in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276726549-content-sap_m_Panel-2-content-sap_chart_LineChart-1" width="100%" height="450px" visibleDimensions="__id" visibleMeasures="Average Time Saved" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276726549-content-sap_m_Panel-2-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Week" role="category" textProperty="Week"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Average Time Saved" label="Average Time Saved in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                </content>
+                            </Panel>
+                            <Panel height="auto" width="100%" headerText="Error Rate" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <Panel height="auto" width="100%" headerText="Human Error Rate in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276770383-content-sap_m_Panel-1-content-sap_chart_LineChart-1" width="1216px" height="450px" visibleDimensions="__id" visibleMeasures="Error Rate" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276770383-content-sap_m_Panel-1-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Week" role="category" textProperty="Week"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Error Rate" label="Error Rate in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                    <Panel height="auto" width="100%" headerText="Machine Error Rate in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276770383-content-sap_m_Panel-2-content-sap_chart_LineChart-1" width="1200px" height="450px" visibleDimensions="__id" visibleMeasures="Error Rate" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276770383-content-sap_m_Panel-2-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Week" role="category" textProperty="Week"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Error Rate" label="Error Rate in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                </content>
+                            </Panel>
+                            <Panel height="auto" width="100%" headerText="Cost Saving in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276824067-content-sap_chart_LineChart-1" width="100%" height="450px" visibleDimensions="__id" visibleMeasures="Cost Saving" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276824067-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                        <chart:dimensions>
+                                            <data:Dimension name="__id" label="Week" role="category" textProperty="Week"/>
+                                        </chart:dimensions>
+                                        <chart:measures>
+                                            <data:Measure name="Cost Saving" label="Cost Saving in %" role="axis2"/>
+                                        </chart:measures>
+                                    </chart:Chart>
+                                </content>
+                            </Panel>
+                            <Panel height="auto" width="100%" headerText="Average Productivity in Minutes" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594281733173-content-sap_chart_LineChart-1" width="1262px" height="450px" visibleDimensions="__id" visibleMeasures="Average Productivity" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594281733173-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                        <chart:dimensions>
+                                            <data:Dimension name="__id" label="Week" role="category" textProperty="Week"/>
+                                        </chart:dimensions>
+                                        <chart:measures>
+                                            <data:Measure name="Average Productivity" label="Average Productivity in Minutes" role="axis2"/>
+                                        </chart:measures>
+                                    </chart:Chart>
+                                </content>
+                            </Panel>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://notes" iconColor="Default" text="Month" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Panel height="auto" width="1275px" headerText="Time" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <Panel height="auto" width="1259px" headerText="Total Time Automized in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276734225-content-sap_m_Panel-1-content-sap_chart_LineChart-1" width="1236px" height="450px" visibleDimensions="__id" visibleMeasures="Total Time Saved" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276734225-content-sap_m_Panel-1-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Month" role="category" textProperty="Month"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Total Time Saved" label="Total Time Saved in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                    <Panel height="auto" width="100%" headerText="Average Time Saved in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276734225-content-sap_m_Panel-2-content-sap_chart_LineChart-1" width="100%" height="450px" visibleDimensions="__id" visibleMeasures="Average Time Saved" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276734225-content-sap_m_Panel-2-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Month" role="category" textProperty="Month"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Average Time Saved" label="Average Time Saved in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                </content>
+                            </Panel>
+                            <Panel height="auto" width="100%" headerText="Error Rate" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <Panel height="auto" width="100%" headerText="Human Error Rate in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276778066-content-sap_m_Panel-1-content-sap_chart_LineChart-1" width="1216px" height="450px" visibleDimensions="__id" visibleMeasures="Error Rate" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276778066-content-sap_m_Panel-1-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Month" role="category" textProperty="Month"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Error Rate" label="Error Rate in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                    <Panel height="auto" width="100%" headerText="Machine Error Rate in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                        <content>
+                                            <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276778066-content-sap_m_Panel-2-content-sap_chart_LineChart-1" width="1228px" height="450px" visibleDimensions="__id" visibleMeasures="Error Rate" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276778066-content-sap_m_Panel-2-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                                <chart:dimensions>
+                                                    <data:Dimension name="__id" label="Month" role="category" textProperty="Month"/>
+                                                </chart:dimensions>
+                                                <chart:measures>
+                                                    <data:Measure name="Error Rate" label="Error Rate in %" role="axis2"/>
+                                                </chart:measures>
+                                            </chart:Chart>
+                                        </content>
+                                    </Panel>
+                                </content>
+                            </Panel>
+                            <Panel height="auto" width="100%" headerText="Cost Saving in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276817505-content-sap_chart_LineChart-1" width="100%" height="450px" visibleDimensions="__id" visibleMeasures="Cost Saving" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276817505-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                        <chart:dimensions>
+                                            <data:Dimension name="__id" label="Month" role="category" textProperty="Month"/>
+                                        </chart:dimensions>
+                                        <chart:measures>
+                                            <data:Measure name="Cost Saving" label="Cost Saving in %" role="axis2"/>
+                                        </chart:measures>
+                                    </chart:Chart>
+                                </content>
+                            </Panel>
+                            <Panel height="auto" width="100%" headerText="Average Productivity in Minutes" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <content>
+                                    <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276892726-content-sap_chart_LineChart-1594281435720" width="1262px" height="450px" visibleDimensions="__id" visibleMeasures="Average Productivity" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276892726-content-sap_chart_LineChart-1594281435720/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                                        <chart:dimensions>
+                                            <data:Dimension name="__id" label="Month" role="category" textProperty="Month"/>
+                                        </chart:dimensions>
+                                        <chart:measures>
+                                            <data:Measure name="Average Productivity" label="Average Productivity in Minutes" role="axis2"/>
+                                        </chart:measures>
+                                    </chart:Chart>
+                                </content>
+                            </Panel>
+                        </content>
+                    </IconTabFilter>
+                </items>
+                <content>
+                    <Text text="Tab Bar Content goes here ..." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                </content>
+            </IconTabBar>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>
