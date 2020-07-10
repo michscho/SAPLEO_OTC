@@ -117,7 +117,6 @@
 			},
 			"targets": {
 				"MainPage": {
-					"controlAggregation": "pages",
 					"viewName": "MainPage",
 					"viewId": "MainPage",
 					"viewLevel": 2,

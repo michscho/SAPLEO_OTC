@@ -1,5 +1,5 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.KpiOverview" xmlns="sap.m" xmlns:chart="sap.chart" xmlns:data="sap.chart.data">
-    <Page showHeader="true" title="KPI" showFooter="true" showNavButton="false">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:chart="sap.chart" xmlns:data="sap.chart.data" controllerName="com.sap.build.standard.otcOptimization.controller.KpiOverview">
+    <Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" showHeader="true" title="KPI" showFooter="true">
         <content>
             <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
                 <items>

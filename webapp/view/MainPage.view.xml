@@ -20,8 +20,8 @@
                                 <content>
                                     <HBox fitContainer="true" class="sapSmartTemplatesAnalyticalListPageKpiTag sapSmartTemplatesAnalyticalListPageKpiTagCozy sapSmartTemplatesAnalyticalListPageKPIPositive">
                                         <items>
-                                            <ObjectStatus class="sapSmartTemplatesAnalyticalListPageKpiTagName" text="Time"/>
-                                            <ObjectNumber class="sapSmartTemplatesAnalyticalListPageKpiTagValue" number="1.9" unit="minutes" emphasized="false" state="Success"/>
+                                            <ObjectStatus class="sapSmartTemplatesAnalyticalListPageKpiTagName" text="Average Time Saved"/>
+                                            <ObjectNumber class="sapSmartTemplatesAnalyticalListPageKpiTagValue" number="15" unit="%" emphasized="false" state="Success"/>
                                         </items>
                                     </HBox>
                                 </content>
@@ -30,8 +30,8 @@
                                 <content>
                                     <HBox fitContainer="true" class="sapSmartTemplatesAnalyticalListPageKpiTag sapSmartTemplatesAnalyticalListPageKpiTagCozy sapSmartTemplatesAnalyticalListPageKPIPositive">
                                         <items>
-                                            <ObjectStatus class="sapSmartTemplatesAnalyticalListPageKpiTagName" text="%"/>
-                                            <ObjectNumber class="sapSmartTemplatesAnalyticalListPageKpiTagValue" number="80" unit="Automated" emphasized="false" state="Success"/>
+                                            <ObjectStatus class="sapSmartTemplatesAnalyticalListPageKpiTagName" text="Machine Error Rate"/>
+                                            <ObjectNumber class="sapSmartTemplatesAnalyticalListPageKpiTagValue" number="14" unit="%" emphasized="false" state="Success"/>
                                         </items>
                                     </HBox>
                                 </content>
@@ -40,8 +40,8 @@
                                 <content>
                                     <HBox fitContainer="true" class="sapSmartTemplatesAnalyticalListPageKpiTag sapSmartTemplatesAnalyticalListPageKpiTagCozy sapSmartTemplatesAnalyticalListPageKPICritical">
                                         <items>
-                                            <ObjectStatus class="sapSmartTemplatesAnalyticalListPageKpiTagName" text="Saved"/>
-                                            <ObjectNumber class="sapSmartTemplatesAnalyticalListPageKpiTagValue" number="0.6" unit="USD" emphasized="false" state="Warning"/>
+                                            <ObjectStatus class="sapSmartTemplatesAnalyticalListPageKpiTagName" text="Cost Saving"/>
+                                            <ObjectNumber class="sapSmartTemplatesAnalyticalListPageKpiTagValue" number="77" unit="%" emphasized="false" state="Success"/>
                                         </items>
                                     </HBox>
                                 </content>
