@@ -215,13 +215,14 @@
                                                     <OverflowToolbarButton text="vertical-bar-chart" type="Transparent" icon="sap-icon://vertical-bar-chart" iconFirst="true" width="auto" enabled="true" visible="true" tooltip="" iconDensityAware="false"/>
                                                 </content>
                                             </OverflowToolbar>
-                                            <chart:Chart id="Fiori_AnalyticalListPage_AnalyticalListPage_0-content-Fiori_AnalyticalListPage_Content-1-chartcontent-Fiori_AnalyticalListPage_ChartContainer-1-charts-sap_chart_BarChart-1593436481346" width="100%" height="450px" visibleDimensions="__id" visibleMeasures="mea0,# Automated" vizProperties="{staticDataModel>/Fiori_AnalyticalListPage_AnalyticalListPage_0-content-Fiori_AnalyticalListPage_Content-1-chartcontent-Fiori_AnalyticalListPage_ChartContainer-1-charts-sap_chart_BarChart-1593436481346/vizProperties}" chartType="bar" selectionMode="Single" uiConfig="{}">
+                                            <chart:Chart id="Fiori_AnalyticalListPage_AnalyticalListPage_0-content-Fiori_AnalyticalListPage_Content-1-chartcontent-Fiori_AnalyticalListPage_ChartContainer-1-charts-sap_chart_BarChart-1593436481346" width="100%" height="450px" visibleDimensions="__id" visibleMeasures="mea0,# Manually,# Automated" vizProperties="{staticDataModel>/Fiori_AnalyticalListPage_AnalyticalListPage_0-content-Fiori_AnalyticalListPage_Content-1-chartcontent-Fiori_AnalyticalListPage_ChartContainer-1-charts-sap_chart_BarChart-1593436481346/vizProperties}" chartType="bar" selectionMode="Single" uiConfig="{}">
                                                 <chart:dimensions>
-                                                    <data:Dimension name="__id" label="Orders" role="category" textProperty="dim0"/>
+                                                    <data:Dimension name="__id" label="Orders per Month" role="category" textProperty="dim0"/>
                                                 </chart:dimensions>
                                                 <chart:measures>
                                                     <data:Measure name="mea0" label="# Orders" role="axis2"/>
                                                     <data:Measure name="# Automated" role="axis2"/>
+                                                    <data:Measure name="# Manually" role = "axis2"/>
                                                 </chart:measures>
                                             </chart:Chart>
                                         </items>
