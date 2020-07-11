@@ -5,58 +5,51 @@
  * Client to save
  * Enrichment specifies which configuration and ML to use
  */
-// @ts-ignore
 var jsonData = {
-    extraction: {
-        headerFields: [
-            "documentNumber",
-            "taxId",
-            "taxName",
-            "purchaseOrderNumber",
-            "shippingAmount",
-            "netAmount",
-            "senderAddress",
-            "senderName",
-            "grossAmount",
-            "currencyCode",
-            "receiverContact",
-            "documentDate",
-            "taxAmount",
-            "taxRate",
-            "receiverName",
-            "receiverAddress",
-            "deliveryDate",
-            "paymentTerms",
-            "shipToAddress",
-            "deliveryNoteNumber",
-            "senderBankAccount"
-        ],
-        lineItemFields: [
-            "description",
-            "netAmount",
-            "quantity",
-            "unitPrice",
-            "materialNumber",
-            "documentNumber",
-            "documentDate",
-            "discountAmount",
-            "deductionAmount",
-            "itemNumber"
-        ]
+  "extraction": {
+    "headerFields": [
+      "documentNumber",
+      "taxId",
+      "taxName",
+      "purchaseOrderNumber",
+      "shippingAmount",
+      "netAmount",
+      "senderAddress",
+      "senderName",
+      "grossAmount",
+      "currencyCode",
+      "receiverContact",
+      "documentDate",
+      "taxAmount",
+      "taxRate",
+      "receiverName",
+      "receiverAddress",
+      "deliveryDate",
+      "paymentTerms",
+      "deliveryNoteNumber",
+      "senderBankAccount"
+    ],
+    "lineItemFields": [
+      "description",
+      "netAmount",
+      "quantity",
+      "unitPrice",
+      "materialNumber"
+    ]
+  },
+  "clientId": "c_00",
+  "documentType": "invoice",
+  "receivedDate": "2020-06-17",
+  "enrichment": {
+    "sender": {
+      "top": 5,
+      "type": "businessEntity",
+      "subtype": "supplier"
     },
-    clientId: "c_00",
-    documentType: "invoice",
-    receivedDate: "2020-02-17",
-    enrichment: {
-        sender: {
-            top: 5,
-            type: "businessEntity",
-            subtype: "supplier"
-        },
-        employee: {
-            type: "employee"
-        }
+    "employee": {
+      "type": "employee"
     }
+  }
 };
 
 /**
@@ -88,7 +81,7 @@ async function postDocument(pdfData) {
  */
 async function fetchDocument() {
     let response = await getToken();
-    const id = '/762cf44d-9310-4d06-bcae-53dd3e82667e';
+    const id = '/7dc8cf43-96f8-4116-9ebd-0430df0c685c';
     return axios({
         url: jobsUrl + id,
         method: 'get',
@@ -199,7 +192,7 @@ sap.ui.define([
         	data.append('file', oEvent.getParameter('files')[0], oEvent.getParameter('files')[0].fileName);
         	data.append("options", JSON.stringify(jsonData));
         	postDocument(data);
-			console.log(data);
+			//console.log(data);
 			// Header Token
 			var oCustomerHeaderToken = new UploadCollectionParameter({
 				name: "x-csrf-token",
