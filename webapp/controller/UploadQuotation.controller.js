@@ -81,7 +81,7 @@ async function postDocument(pdfData) {
  */
 async function fetchDocument() {
     let response = await getToken();
-    const id = '/7dc8cf43-96f8-4116-9ebd-0430df0c685c';
+    const id = '/7cbb6bb7-8656-4140-9b06-8c3cc391f503';
     return axios({
         url: jobsUrl + id,
         method: 'get',
@@ -116,6 +116,7 @@ sap.ui.define([
 
 	return Controller.extend("sap.m.sample.UploadCollection.Page", {
 		onInit: function() {
+			
 			// set mock data
 			var sPath = sap.ui.require.toUrl("com.sap.build.standard.otcOptimization.controller.UploadQuotation");
 			this.getView().setModel(new JSONModel(sPath));
@@ -147,6 +148,7 @@ sap.ui.define([
 					}
 				]
 			}), "settings");
+		
 
 			this.getView().setModel(new JSONModel({
 				"items": ["jpg", "txt", "ppt", "doc", "xls", "pdf", "png"],
@@ -185,13 +187,17 @@ sap.ui.define([
 			}
 		},
 
-		onChange: function(oEvent) {
+		onChange: async function(oEvent) {
 			var oUploadCollection = oEvent.getSource();
 			console.log("HERE");
 			var data = new FormData();
         	data.append('file', oEvent.getParameter('files')[0], oEvent.getParameter('files')[0].fileName);
         	data.append("options", JSON.stringify(jsonData));
-        	postDocument(data);
+        	
+        	let a = await fetchDocument();
+			console.log(a);
+			
+        	//postDocument(data);
 			//console.log(data);
 			// Header Token
 			var oCustomerHeaderToken = new UploadCollectionParameter({
