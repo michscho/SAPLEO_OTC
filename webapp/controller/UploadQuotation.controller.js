@@ -52,6 +52,7 @@ var jsonData = {
   }
 };
 
+
 /**
  * To send a pdf to SAP Document Extraction you need to send them as form data
  * @param pdfData - Formdata with body and binary pdf
@@ -195,7 +196,20 @@ sap.ui.define([
         	data.append("options", JSON.stringify(jsonData));
         	
         	let a = await fetchDocument();
-			console.log(a);
+        	
+        	console.log("update OrderAmountSet");
+        	
+        	var newvalueOrderAmount = [{"ID":"0000000001","CurrencyCode":"USD","TaxRate":3,"NetAmounts":85,"GrossAmounts":93.5}];
+        	
+        	
+        	var documentArray = JSON.parse(JSON.stringify( a.data.extraction.headerFields));
+			console.log("The Array at position 0 is: " + JSON.stringify(documentArray[0]));
+			
+			
+			
+			
+			
+			
 			
         	//postDocument(data);
 			//console.log(data);
