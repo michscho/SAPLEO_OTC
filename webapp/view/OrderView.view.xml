@@ -1,4 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.OrderView" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" controllerName="com.sap.build.standard.otcOptimization.controller.OrderView">
     <uxap:ObjectPageLayout showTitleInHeaderContent="false" showHeaderContent="true" showEditHeaderButton="false" showFooter="false" class="sapUiSizeCompact">
         <uxap:headerTitle>
             <uxap:ObjectPageHeader objectTitle="{Number}" objectSubtitle="{path: 'Date', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" showPlaceholder="true" objectImageURI="/build/uilibraries/content/static/image-canvas.svg">
@@ -74,7 +74,7 @@
                         <items>
                             <Label text="SenderAddress"/>
                             <Label text=":" class="sapUiTinyMarginEnd"/>
-                            <ObjectStatus text="{Sender/Address}"/>
+                            <ObjectStatus text="{Sender/Address}" state="Success"/>
                         </items>
                     </HBox>
                     <HBox>
@@ -137,7 +137,7 @@
                                                             <Label text="Name" required="true"/>
                                                         </form:label>
                                                         <form:fields>
-                                                            <ObjectStatus text="{Receiver/Name}"/>
+                                                            <ObjectStatus text="{Receiver/Name}" state="Success"/>
                                                         </form:fields>
                                                     </form:FormElement>
                                                     <form:FormElement>
@@ -145,7 +145,7 @@
                                                             <Label text="Address" required="true"/>
                                                         </form:label>
                                                         <form:fields>
-                                                            <ObjectStatus text="{Receiver/Address}"/>
+                                                            <ObjectStatus text="{Receiver/Address}" state="Warning"/>
                                                         </form:fields>
                                                     </form:FormElement>
                                                 </form:formElements>
@@ -168,7 +168,7 @@
                                                             <Label text="Name" required="true"/>
                                                         </form:label>
                                                         <form:fields>
-                                                            <ObjectStatus text="{Sender/Name}"/>
+                                                            <ObjectStatus text="{Sender/Name}" state="Success"/>
                                                         </form:fields>
                                                     </form:FormElement>
                                                     <form:FormElement>
@@ -176,7 +176,7 @@
                                                             <Label text="Address" required="true"/>
                                                         </form:label>
                                                         <form:fields>
-                                                            <ObjectStatus text="{Sender/Address}"/>
+                                                            <ObjectStatus text="{Sender/Address}" state="Success"/>
                                                         </form:fields>
                                                     </form:FormElement>
                                                     <form:FormElement>
@@ -184,7 +184,7 @@
                                                             <Label text="senderBankAccount" required="false"/>
                                                         </form:label>
                                                         <form:fields>
-                                                            <ObjectStatus text="{Sender/BankAccount}"/>
+                                                            <ObjectStatus text="{Sender/BankAccount}" state="Warning"/>
                                                         </form:fields>
                                                     </form:FormElement>
                                                 </form:formElements>
@@ -215,7 +215,7 @@
                                                             <Label text="TaxRate" required="false"/>
                                                         </form:label>
                                                         <form:fields>
-                                                            <ObjectStatus text="{path: 'Amount/TaxRate', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}"/>
+                                                            <ObjectStatus text="{path: 'Amount/TaxRate', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" state="Success"/>
                                                         </form:fields>
                                                     </form:FormElement>
                                                     <form:FormElement>
@@ -223,7 +223,7 @@
                                                             <Label text="Net Amount" required="false"/>
                                                         </form:label>
                                                         <form:fields>
-                                                            <ObjectStatus text="{path: 'Amount/NetAmounts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}"/>
+                                                            <ObjectStatus text="{path: 'Amount/NetAmounts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" state="Success"/>
                                                         </form:fields>
                                                     </form:FormElement>
                                                     <form:FormElement>
@@ -231,7 +231,7 @@
                                                             <Label text="Gross Amounts" required="false"/>
                                                         </form:label>
                                                         <form:fields>
-                                                            <ObjectStatus text="{path: 'Amount/GrossAmounts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}"/>
+                                                            <ObjectStatus text="{path: 'Amount/GrossAmounts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" state="Success"/>
                                                         </form:fields>
                                                     </form:FormElement>
                                                 </form:formElements>
@@ -254,7 +254,7 @@
                                                             <Label text="Purchase Order Number" required="false"/>
                                                         </form:label>
                                                         <form:fields>
-                                                            <ObjectStatus text="{Details/PurchaseOrderNumber}"/>
+                                                            <ObjectStatus text="{Details/PurchaseOrderNumber}" state="Error"/>
                                                         </form:fields>
                                                     </form:FormElement>
                                                     <form:FormElement>
@@ -262,7 +262,7 @@
                                                             <Label text="Payment Terms" required="false"/>
                                                         </form:label>
                                                         <form:fields>
-                                                            <ObjectStatus text="{Payment/Terms}"/>
+                                                            <ObjectStatus text="{Payment/Terms}" state="Success"/>
                                                         </form:fields>
                                                     </form:FormElement>
                                                 </form:formElements>
@@ -313,10 +313,10 @@
                                     <ColumnListItem type="Active">
                                         <cells>
                                             <ObjectIdentifier title="{ID}" text="{Description}"/>
-                                            <ObjectStatus text="{path: 'Quantity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}"/>
+                                            <ObjectStatus text="{path: 'Quantity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" state="Success"/>
                                             <HBox alignItems="Stretch" justifyContent="End" alignContent="Stretch">
                                                 <items>
-                                                    <ObjectNumber number="{path:'NetAmount', formatter:'.formatFractionDigitFromValue'}" unit="{path: 'UnitPrice', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" emphasized="false"/>
+                                                    <ObjectNumber number="{path:'NetAmount', formatter:'.formatFractionDigitFromValue'}" unit="{path: 'UnitPrice', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" emphasized="false" state="Success"/>
                                                 </items>
                                             </HBox>
                                         </cells>

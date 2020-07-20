@@ -1,1 +1,2 @@
-[{"ID":"0000000001","CurrencyCode":"USD","TaxRate":0,"NetAmounts":85,"GrossAmounts":93.5}]
+[{"ID":"0000000001","CurrencyCode":"USD","TaxRate":0,"NetAmounts":85,"GrossAmounts":93.5},
+{"ID":"0000000002","CurrencyCode":"EUR","TaxRate":16,"NetAmounts":60,"GrossAmounts":73}]

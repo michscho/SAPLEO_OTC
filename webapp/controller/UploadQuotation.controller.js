@@ -199,14 +199,29 @@ sap.ui.define([
         	
         	console.log("update OrderAmountSet");
         	
-        	var newvalueOrderAmount = [{"ID":"0000000001","CurrencyCode":"USD","TaxRate":3,"NetAmounts":85,"GrossAmounts":93.5}];
+        	
         	
         	
         	var documentArray = JSON.parse(JSON.stringify( a.data.extraction.headerFields));
 			console.log("The Array at position 0 is: " + JSON.stringify(documentArray[0]));
 			
+			console.log("The order Amount Set is");
+	
 			
+			 this.sContext = "OrderDocumentSet('0000000002')";
 			
+			 var oParams = {
+			 		"expand": "Sender,Receiver,Details,Payment,OrderItem"
+			 	};
+			 var oPath;
+
+			 if (this.sContext) {
+			 	oPath = {
+			 		path: "/" + this.sContext,
+			 		parameters: oParams
+			 	};
+			 	this.getView().bindObject(oPath);
+			 }
 			
 			
 			

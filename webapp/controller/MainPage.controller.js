@@ -118,6 +118,7 @@ sap.ui.define([
 				if (!this.sContext) {
 					this.sContext = "OrderDocumentSet('0000000001')";
 				}
+				this.sContext = this.sContext + "/";
 				var oPath;
 				if (this.sContext) {
 					oPath = {
