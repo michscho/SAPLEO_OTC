@@ -134,7 +134,7 @@
                                                 <form:formElements>
                                                     <form:FormElement>
                                                         <form:label>
-                                                            <Label text="Name" required="true"/>
+                                                            <Label text="Name (0.611%)" required="true"/>
                                                         </form:label>
                                                         <form:fields>
                                                             <ObjectStatus text="{Receiver/Name}" state="Success"/>
@@ -142,7 +142,7 @@
                                                     </form:FormElement>
                                                     <form:FormElement>
                                                         <form:label>
-                                                            <Label text="Address" required="true"/>
+                                                            <Label text="Address (0.583%)" required="true"/>
                                                         </form:label>
                                                         <form:fields>
                                                             <ObjectStatus text="{Receiver/Address}" state="Warning"/>
@@ -165,7 +165,7 @@
                                                 <form:formElements>
                                                     <form:FormElement>
                                                         <form:label>
-                                                            <Label text="Name" required="true"/>
+                                                            <Label text="Name (0.622%)" required="true"/>
                                                         </form:label>
                                                         <form:fields>
                                                             <ObjectStatus text="{Sender/Name}" state="Success"/>
@@ -173,7 +173,7 @@
                                                     </form:FormElement>
                                                     <form:FormElement>
                                                         <form:label>
-                                                            <Label text="Address" required="true"/>
+                                                            <Label text="Address (0.604%)" required="true"/>
                                                         </form:label>
                                                         <form:fields>
                                                             <ObjectStatus text="{Sender/Address}" state="Success"/>
@@ -181,7 +181,7 @@
                                                     </form:FormElement>
                                                     <form:FormElement>
                                                         <form:label>
-                                                            <Label text="senderBankAccount" required="false"/>
+                                                            <Label text="senderBankAccount (0.595%)" required="false"/>
                                                         </form:label>
                                                         <form:fields>
                                                             <ObjectStatus text="{Sender/BankAccount}" state="Warning"/>
@@ -212,7 +212,7 @@
                                                 <form:formElements>
                                                     <form:FormElement>
                                                         <form:label>
-                                                            <Label text="TaxRate" required="false"/>
+                                                            <Label text="TaxRate (0.818%)" required="false"/>
                                                         </form:label>
                                                         <form:fields>
                                                             <ObjectStatus text="{path: 'Amount/TaxRate', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" state="Success"/>
@@ -220,7 +220,7 @@
                                                     </form:FormElement>
                                                     <form:FormElement>
                                                         <form:label>
-                                                            <Label text="Net Amount" required="false"/>
+                                                            <Label text="Net Amount (0.633%)" required="false"/>
                                                         </form:label>
                                                         <form:fields>
                                                             <ObjectStatus text="{path: 'Amount/NetAmounts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" state="Success"/>
@@ -228,7 +228,7 @@
                                                     </form:FormElement>
                                                     <form:FormElement>
                                                         <form:label>
-                                                            <Label text="Gross Amounts" required="false"/>
+                                                            <Label text="Gross Amounts (0.656%)" required="false"/>
                                                         </form:label>
                                                         <form:fields>
                                                             <ObjectStatus text="{path: 'Amount/GrossAmounts', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" state="Success"/>
@@ -251,7 +251,7 @@
                                                 <form:formElements>
                                                     <form:FormElement>
                                                         <form:label>
-                                                            <Label text="Purchase Order Number" required="false"/>
+                                                            <Label text="Purchase Order Number (0.111%)" required="false"/>
                                                         </form:label>
                                                         <form:fields>
                                                             <ObjectStatus text="{Details/PurchaseOrderNumber}" state="Error"/>
@@ -259,7 +259,7 @@
                                                     </form:FormElement>
                                                     <form:FormElement>
                                                         <form:label>
-                                                            <Label text="Payment Terms" required="false"/>
+                                                            <Label text="Payment Terms (0.600%)" required="false"/>
                                                         </form:label>
                                                         <form:fields>
                                                             <ObjectStatus text="{Payment/Terms}" state="Success"/>
@@ -295,17 +295,17 @@
                                 <columns>
                                     <Column width="auto" minScreenWidth="Phone">
                                         <header>
-                                            <Text text="Description" width="auto"/>
+                                            <Text text="Description (0.607%)" width="auto"/>
                                         </header>
                                     </Column>
                                     <Column width="auto" minScreenWidth="Tablet" demandPopin="true">
                                         <header>
-                                            <Text text="Quantity" width="auto"/>
+                                            <Text text="Quantity (0.637%)" width="auto"/>
                                         </header>
                                     </Column>
                                     <Column width="auto" hAlign="Right" minScreenWidth="Phone">
                                         <header>
-                                            <Text text="NetAmount" width="auto"/>
+                                            <Text text="NetAmount (0.633%)" width="auto"/>
                                         </header>
                                     </Column>
                                 </columns>
