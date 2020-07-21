@@ -465,11 +465,11 @@
                 <Property Name="UoMCode" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="UoMCode"/>
                 <Property Name="UnitsOfMeasurement" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="UnitsOfMeasurement"/>
                 <Property Name="___FK_c11b4407a3721b6b0d721a42" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="From.BA"/>
-                <NavigationProperty Name="DetailsLines" Relationship="55cdde432e2b500113bf2f49.ItemsLinesDetailsLinesDetailsLines" FromRole="FromRole_ItemsLinesDetailsLinesDetailsLines" ToRole="ToRole_ItemsLinesDetailsLinesDetailsLines"/>
+                <NavigationProperty Name="DetailsLines" Relationship="041e6d498861281413bb3ced.ItemsLinesDetailsLinesDetailsLines" FromRole="FromRole_ItemsLinesDetailsLinesDetailsLines" ToRole="ToRole_ItemsLinesDetailsLinesDetailsLines"/>
             </EntityType>
             <Association Name="ItemsLinesDetailsLinesDetailsLines">
-                <End Type="55cdde432e2b500113bf2f49.ItemsLines" Multiplicity="1" Role="FromRole_ItemsLinesDetailsLinesDetailsLines"/>
-                <End Type="55cdde432e2b500113bf2f49.DetailsLines" Multiplicity="*" Role="ToRole_ItemsLinesDetailsLinesDetailsLines"/>
+                <End Type="041e6d498861281413bb3ced.ItemsLines" Multiplicity="1" Role="FromRole_ItemsLinesDetailsLinesDetailsLines"/>
+                <End Type="041e6d498861281413bb3ced.DetailsLines" Multiplicity="*" Role="ToRole_ItemsLinesDetailsLinesDetailsLines"/>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_ItemsLinesDetailsLinesDetailsLines">
                         <PropertyRef Name="ID"/>
@@ -512,11 +512,11 @@
                 <Property Name="HandWritten" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="HandWritten"/>
                 <Property Name="PeriodIndicator" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PeriodIndicator"/>
                 <Property Name="PaymentMethod" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PaymentMethod"/>
-                <NavigationProperty Name="ItemsLines" Relationship="55cdde432e2b500113bf2f49.BAItemsLinesItemsLines" FromRole="FromRole_BAItemsLinesItemsLines" ToRole="ToRole_BAItemsLinesItemsLines"/>
+                <NavigationProperty Name="ItemsLines" Relationship="041e6d498861281413bb3ced.BAItemsLinesItemsLines" FromRole="FromRole_BAItemsLinesItemsLines" ToRole="ToRole_BAItemsLinesItemsLines"/>
             </EntityType>
             <Association Name="BAItemsLinesItemsLines">
-                <End Type="55cdde432e2b500113bf2f49.BA" Multiplicity="1" Role="FromRole_BAItemsLinesItemsLines"/>
-                <End Type="55cdde432e2b500113bf2f49.ItemsLines" Multiplicity="*" Role="ToRole_BAItemsLinesItemsLines"/>
+                <End Type="041e6d498861281413bb3ced.BA" Multiplicity="1" Role="FromRole_BAItemsLinesItemsLines"/>
+                <End Type="041e6d498861281413bb3ced.ItemsLines" Multiplicity="*" Role="ToRole_BAItemsLinesItemsLines"/>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_BAItemsLinesItemsLines">
                         <PropertyRef Name="ID"/>
