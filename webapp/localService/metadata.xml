@@ -74,7 +74,26 @@
                     <End EntitySet="OrderItemSet" Role="ToRole_OrderDocumentOrderItemOrderItem"/>	
                 </AssociationSet>	
                 <EntitySet Name="OrderDetailsSet" EntityType="041e6d498861281413bb3ced.OrderDetails" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>	
-                <EntitySet Name="OrderItemSet" EntityType="041e6d498861281413bb3ced.OrderItem" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>	
+                <EntitySet Name="OrderItemSet" EntityType="041e6d498861281413bb3ced.OrderItem" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="ItemsLinesSet" EntityType="041e6d498861281413bb3ced.ItemsLines" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="ItemsLinesDetailsLinesDetailsLines" Association="041e6d498861281413bb3ced.ItemsLinesDetailsLinesDetailsLines" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="ItemsLinesSet" Role="FromRole_ItemsLinesDetailsLinesDetailsLines"/>
+                    <End EntitySet="DetailsLinesSet" Role="ToRole_ItemsLinesDetailsLinesDetailsLines"/>
+                </AssociationSet>
+                <EntitySet Name="BASet" EntityType="041e6d498861281413bb3ced.BA" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="BAItemsLinesItemsLines" Association="041e6d498861281413bb3ced.BAItemsLinesItemsLines" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="BASet" Role="FromRole_BAItemsLinesItemsLines"/>
+                    <End EntitySet="ItemsLinesSet" Role="ToRole_BAItemsLinesItemsLines"/>
+                </AssociationSet>
+                <EntitySet Name="DetailsLinesSet" EntityType="041e6d498861281413bb3ced.DetailsLines" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="StatuesSet" EntityType="041e6d498861281413bb3ced.Statues" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="BP_NameSet" EntityType="041e6d498861281413bb3ced.BP_Name" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="AgreeTypeSet" EntityType="041e6d498861281413bb3ced.AgreeType" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="UserSet" EntityType="041e6d498861281413bb3ced.User" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="ItemSet" EntityType="041e6d498861281413bb3ced.Item" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="AgreeMethodSet" EntityType="041e6d498861281413bb3ced.AgreeMethod" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="BP_CodeSet" EntityType="041e6d498861281413bb3ced.BP_Code" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="Item_NoSet" EntityType="041e6d498861281413bb3ced.Item_No" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
             </EntityContainer>	
             <EntityType Name="SalesOrder">	
                 <Key>	
@@ -418,7 +437,163 @@
                 <Property Name="Quantity" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Quantity"/>	
                 <Property Name="NetAmount" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="NetAmount"/>	
                 <Property Name="UnitPrice" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="UnitPrice"/>	
-            </EntityType>	
+            </EntityType>
+            <EntityType Name="ItemsLines">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="AgreementNo" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AgreementNo"/>
+                <Property Name="AgreementRowNumber" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AgreementRowNumber"/>
+                <Property Name="ItemNo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ItemNo"/>
+                <Property Name="ItemDescription" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ItemDescription"/>
+                <Property Name="ItemGroup" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ItemGroup"/>
+                <Property Name="PlannedQuantity" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PlannedQuantity"/>
+                <Property Name="UnitPrice" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="UnitPrice"/>
+                <Property Name="PriceCurrency" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PriceCurrency"/>
+                <Property Name="CumulativeQuantity" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CumulativeQuantity"/>
+                <Property Name="CumulativeAmountLC" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CumulativeAmountLC"/>
+                <Property Name="CumulativeAmountFC" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CumulativeAmountFC"/>
+                <Property Name="FreeText" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FreeText"/>
+                <Property Name="InventoryUoM" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="InventoryUoM"/>
+                <Property Name="PortionOfReturns" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PortionOfReturns"/>
+                <Property Name="EndOfWarranty" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="EndOfWarranty"/>
+                <Property Name="PlannedAmountLC" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PlannedAmountLC"/>
+                <Property Name="PlannedAmountFC" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PlannedAmountFC"/>
+                <Property Name="LineDiscount" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="LineDiscount"/>
+                <Property Name="UoMEntry" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="UoMEntry"/>
+                <Property Name="UoMCode" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="UoMCode"/>
+                <Property Name="UnitsOfMeasurement" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="UnitsOfMeasurement"/>
+                <Property Name="___FK_c11b4407a3721b6b0d721a42" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="From.BA"/>
+                <NavigationProperty Name="DetailsLines" Relationship="55cdde432e2b500113bf2f49.ItemsLinesDetailsLinesDetailsLines" FromRole="FromRole_ItemsLinesDetailsLinesDetailsLines" ToRole="ToRole_ItemsLinesDetailsLinesDetailsLines"/>
+            </EntityType>
+            <Association Name="ItemsLinesDetailsLinesDetailsLines">
+                <End Type="55cdde432e2b500113bf2f49.ItemsLines" Multiplicity="1" Role="FromRole_ItemsLinesDetailsLinesDetailsLines"/>
+                <End Type="55cdde432e2b500113bf2f49.DetailsLines" Multiplicity="*" Role="ToRole_ItemsLinesDetailsLinesDetailsLines"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ItemsLinesDetailsLinesDetailsLines">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_ItemsLinesDetailsLinesDetailsLines">
+                        <PropertyRef Name="___FK_060c54d21d3b47200d721a42"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="BA">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="AgreementNo" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AgreementNo"/>
+                <Property Name="BPCode" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="BPCode"/>
+                <Property Name="BPName" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="BPName"/>
+                <Property Name="ContactPersonCode" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ContactPersonCode"/>
+                <Property Name="StartDate" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="StartDate"/>
+                <Property Name="EndDate" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="EndDate"/>
+                <Property Name="TerminateDate" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="TerminateDate"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+                <Property Name="AgreementType" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AgreementType"/>
+                <Property Name="Status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+                <Property Name="Owner" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Owner"/>
+                <Property Name="IgnorePricesInAgreement" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="IgnorePricesInAgreement"/>
+                <Property Name="Renewal" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Renewal"/>
+                <Property Name="RemindUnit" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RemindUnit"/>
+                <Property Name="RemindTime" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RemindTime"/>
+                <Property Name="Remarks" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Remarks"/>
+                <Property Name="AttachmentEntry" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AttachmentEntry"/>
+                <Property Name="SettlementProbability" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SettlementProbability"/>
+                <Property Name="AgreementMethod" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AgreementMethod"/>
+                <Property Name="PaymentTerms" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PaymentTerms"/>
+                <Property Name="PriceList" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PriceList"/>
+                <Property Name="SigningDate" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="SigningDate"/>
+                <Property Name="AmendmentTo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AmendmentTo"/>
+                <Property Name="Series" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Series"/>
+                <Property Name="DocNum" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DocNum"/>
+                <Property Name="HandWritten" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="HandWritten"/>
+                <Property Name="PeriodIndicator" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PeriodIndicator"/>
+                <Property Name="PaymentMethod" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PaymentMethod"/>
+                <NavigationProperty Name="ItemsLines" Relationship="55cdde432e2b500113bf2f49.BAItemsLinesItemsLines" FromRole="FromRole_BAItemsLinesItemsLines" ToRole="ToRole_BAItemsLinesItemsLines"/>
+            </EntityType>
+            <Association Name="BAItemsLinesItemsLines">
+                <End Type="55cdde432e2b500113bf2f49.BA" Multiplicity="1" Role="FromRole_BAItemsLinesItemsLines"/>
+                <End Type="55cdde432e2b500113bf2f49.ItemsLines" Multiplicity="*" Role="ToRole_BAItemsLinesItemsLines"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_BAItemsLinesItemsLines">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_BAItemsLinesItemsLines">
+                        <PropertyRef Name="___FK_c11b4407a3721b6b0d721a42"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="DetailsLines">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="AgreementNo" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AgreementNo"/>
+                <Property Name="AgreementRowNumber" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AgreementRowNumber"/>
+                <Property Name="AgreementEffectiveRowNumber" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AgreementEffectiveRowNumber"/>
+                <Property Name="Frequency" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Frequency"/>
+                <Property Name="From" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="From"/>
+                <Property Name="To" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="To"/>
+                <Property Name="ReleaseInformation" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ReleaseInformation"/>
+                <Property Name="Quantity" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Quantity"/>
+                <Property Name="Warehouse" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Warehouse"/>
+                <Property Name="FreeText" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FreeText"/>
+                <Property Name="ConsumeSalesForecast" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ConsumeSalesForecast"/>
+                <Property Name="PlannedAmountLC" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PlannedAmountLC"/>
+                <Property Name="PlannedAmountFC" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PlannedAmountFC"/>
+                <Property Name="___FK_060c54d21d3b47200d721a42" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="From.ItemsLines"/>
+            </EntityType>
+            <EntityType Name="Statues">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="BP_Name">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="AgreeType">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="User">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="Item">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="AgreeMethod">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="BP_Code">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="Item_No">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
         </Schema>	
     </edmx:DataServices>	
 </edmx:Edmx>

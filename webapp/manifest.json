@@ -219,7 +219,8 @@
 					"pattern": "Inbox/OverviewEmail/:context:",
 					"name": "OverviewEmail",
 					"target": [
-						"Inbox"
+						"Inbox",
+						"OverviewEmail"
 					]
 				},
 				{
@@ -228,6 +229,22 @@
 					"target": [
 						"Inbox"
 						
+					]
+				},
+				{
+					"pattern": "Inbox/ItemDescription/:context:",
+					"name": "ItemDescription",
+					"target": [
+						"Inbox",
+						"ItemDescription"
+					]
+				},
+				{
+					"pattern": "Inbox/EditOverviewEmail/:context:",
+					"name": "EditOverviewEmail",
+					"target": [
+						"Inbox",
+						"EditOverviewEmail"
 					]
 				}
 			]
