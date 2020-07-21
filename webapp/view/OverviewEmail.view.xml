@@ -1,0 +1,124 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.OverviewEmail" xmlns:uxap="sap.uxap" xmlns="sap.m">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="true" showHeaderContent="true" showAnchorBar="true" subSectionLayout="TitleOnTop">
+        <uxap:headerContent/>
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader objectImageURI="sap-icon://kpi-managing-my-area" objectTitle="{BPName}" objectSubtitle="{Description}" headerDesign="Light" objectImageShape="Circle" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" isActionAreaAlwaysVisible="true">
+                <uxap:actions>
+                    <Button text="Edit" type="Transparent" icon="sap-icon://edit" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                </uxap:actions>
+                <uxap:breadCrumbsLinks/>
+                <uxap:navigationBar>
+                    <Bar design="Header">
+                        <contentLeft>
+                            <Button text="" type="Back" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                        </contentLeft>
+                        <contentMiddle>
+                            <Title text="Inbox" titleStyle="H5" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                        </contentMiddle>
+                        <contentRight/>
+                    </Bar>
+                </uxap:navigationBar>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:sections>
+            <uxap:ObjectPageSection showTitle="true" title="Page Section Title" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="General" mode="Expanded">
+                        <uxap:blocks>
+                            <VBox alignItems="Start" direction="Column" fitContainer="true" width="auto" renderType="Div" visible="true" height="auto">
+                                <items>
+                                    <ObjectListItem intro="{ID}" title="{BPName}" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute title="Status" text="{Status}" active="false" visible="true"/>
+                                            <ObjectAttribute title="Code" text="{BPCode}" active="false" visible="true"/>
+                                            <ObjectAttribute title="Description" text="{Description}" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus/>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="" title="" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute title="Start Date" text="{path: 'StartDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" active="false" visible="true"/>
+                                            <ObjectAttribute title="End Date" text="{path: 'EndDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" active="false" visible="true"/>
+                                            <ObjectAttribute title="Termination Date" text="{TerminateDate}" active="false" visible="true"/>
+                                            <ObjectAttribute title="Signing Date" text="{path: 'SigningDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus/>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="" title="" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute title="Agreement Method" text="{AgreementMethod}" active="false" visible="true"/>
+                                            <ObjectAttribute title="Agreement Type" text="{AgreementType}" active="false" visible="true"/>
+                                            <ObjectAttribute title="Settlement Probability" text="{SettlementProbability}" active="false" visible="true"/>
+                                            <ObjectAttribute title="Owner" text="{Owner}" active="false" visible="true"/>
+                                            <ObjectAttribute title="Remarks" text="{Remarks}" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus/>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                </items>
+                                <layoutData/>
+                            </VBox>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection showTitle="true" title="Page Section Title" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Details" mode="Expanded">
+                        <uxap:blocks>
+                            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false" class="sapUiResponsiveMargin" itemPress="_onTableItemPress" items="{path:'ItemsLines', templateShareable:true}">
+                                <infoToolbar/>
+                                <headerToolbar/>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Item Description" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Item No." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Planned Quantity" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Unit Price" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Navigation">
+                                        <cells>
+                                            <ObjectIdentifier title="{ItemDescription}" text="" titleActive="false" visible="true"/>
+                                            <Text text="{ItemNo}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <ObjectNumber number="{path: 'PlannedQuantity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" unit="" emphasized="true" state="None"/>
+                                            <ObjectNumber number="{path: 'UnitPrice', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" unit="" emphasized="true" state="None"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+        <uxap:footer/>
+    </uxap:ObjectPageLayout>
+</mvc:View>

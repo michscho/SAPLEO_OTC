@@ -145,6 +145,31 @@
 					"viewId": "Page1",
 					"viewLevel": 1,
 					"transition": "slide"
+				},
+				"Inbox": {
+					"viewName": "Inbox",
+					"viewId": "Inbox",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"OverviewEmail": {
+					"viewName": "OverviewEmail",
+					"viewId": "OverviewEmail",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"ItemDescription": {
+					"viewName": "ItemDescription",
+					"viewId": "ItemDescription",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"EditOverviewEmail": {
+					"controlAggregation": "detailPages",
+					"viewName": "EditOverviewEmail",
+					"viewId": "EditOverviewEmail",
+					"viewLevel": 3,
+					"transition": "slide"
 				}
 			},
 			"routes": [
@@ -188,6 +213,21 @@
 					"pattern": "KpiOverview",
 					"target": [
 						"KpiOverview"
+					]
+				},
+				{
+					"pattern": "Inbox/OverviewEmail/:context:",
+					"name": "OverviewEmail",
+					"target": [
+						"Inbox"
+					]
+				},
+				{
+					"name": "Inbox",
+					"pattern": "Inbox",
+					"target": [
+						"Inbox"
+						
 					]
 				}
 			]

@@ -1772,7 +1772,17 @@
 			"Number": "INQ-2547",
 			"___FK_6a13386b69d643ec13bc8da7_00052": "0000000001",
 			"___FK_df70d6fc95e7df3713bc96a5_00013": "0000000001"
-		}],
+		},{
+				"ID": "0000000002",
+			"___FK_6a13386b69d643ec13bc8da7_00034": "0000000001",
+			"___FK_6a13386b69d643ec13bc8da7_00036": "0000000001",
+			"___FK_6a13386b69d643ec13bc8da7_00038": "0000000001",
+			"___FK_6a13386b69d643ec13bc8da7_00040": "0000000001",
+			"Number": "INQ-1001",
+			"___FK_6a13386b69d643ec13bc8da7_00052": "0000000001",
+			"___FK_df70d6fc95e7df3713bc96a5_00013": "0000000001"
+		}
+		],
 		"OrderDetailsSet": [{
 			"ID": "0000000001",
 			"PurchaseOrderNumber": "12345"
@@ -1783,6 +1793,227 @@
 			"Quantity": 1,
 			"NetAmount": 85,
 			"UnitPrice": 85
+		}],
+			"ItemsLinesSet": [{
+			"ID": "R1",
+			"AgreementNo": 1,
+			"AgreementRowNumber": 1,
+			"ItemNo": "PC 004",
+			"ItemDescription": "IBM PC gen 9",
+			"ItemGroup": 100,
+			"PlannedQuantity": 50,
+			"UnitPrice": 550,
+			"PriceCurrency": "USD",
+			"CumulativeQuantity": 0,
+			"CumulativeAmountLC": 0,
+			"CumulativeAmountFC": 0,
+			"FreeText": "",
+			"InventoryUoM": null,
+			"PortionOfReturns": 0,
+			"EndOfWarranty": null,
+			"PlannedAmountLC": 0,
+			"PlannedAmountFC": 0,
+			"LineDiscount": 0,
+			"UoMEntry": -1,
+			"UoMCode": "Manual",
+			"UnitsOfMeasurement": 1,
+			"___FK_c11b4407a3721b6b0d721a42": "1"
+		}, {
+			"ID": "R2",
+			"AgreementNo": 1,
+			"AgreementRowNumber": 1,
+			"ItemNo": "T 013",
+			"ItemDescription": "Keyboard Mouse Combo EN",
+			"ItemGroup": 101,
+			"PlannedQuantity": 55,
+			"UnitPrice": 60,
+			"PriceCurrency": "USD",
+			"CumulativeQuantity": 0,
+			"CumulativeAmountLC": 0,
+			"CumulativeAmountFC": 0,
+			"FreeText": "",
+			"InventoryUoM": null,
+			"PortionOfReturns": 0,
+			"EndOfWarranty": null,
+			"PlannedAmountLC": 0,
+			"PlannedAmountFC": 0,
+			"LineDiscount": 0,
+			"UoMEntry": -1,
+			"UoMCode": "Manual",
+			"UnitsOfMeasurement": 1,
+			"___FK_c11b4407a3721b6b0d721a42": "1"
+		}, {
+			"ID": "R3",
+			"AgreementNo": 1,
+			"AgreementRowNumber": 1,
+			"ItemNo": "T 412",
+			"ItemDescription": "Monitor 27 inch",
+			"ItemGroup": 101,
+			"PlannedQuantity": 45,
+			"UnitPrice": 220,
+			"PriceCurrency": "USD",
+			"CumulativeQuantity": 0,
+			"CumulativeAmountLC": 0,
+			"CumulativeAmountFC": 0,
+			"FreeText": "",
+			"InventoryUoM": null,
+			"PortionOfReturns": 0,
+			"EndOfWarranty": null,
+			"PlannedAmountLC": 0,
+			"PlannedAmountFC": 0,
+			"LineDiscount": 0,
+			"UoMEntry": -1,
+			"UoMCode": "Manual",
+			"UnitsOfMeasurement": 1,
+			"___FK_c11b4407a3721b6b0d721a42": "1"
+		}, {
+			"ID": "R4",
+			"AgreementNo": 1,
+			"AgreementRowNumber": 1,
+			"ItemNo": "S 201",
+			"ItemDescription": "Samsung Galaxy S 20",
+			"ItemGroup": 201,
+			"PlannedQuantity": 3,
+			"UnitPrice": 3600,
+			"PriceCurrency": "USD",
+			"CumulativeQuantity": 0,
+			"CumulativeAmountLC": 0,
+			"CumulativeAmountFC": 0,
+			"FreeText": "",
+			"InventoryUoM": null,
+			"PortionOfReturns": 0,
+			"EndOfWarranty": null,
+			"PlannedAmountLC": 0,
+			"PlannedAmountFC": 0,
+			"LineDiscount": 0,
+			"UoMEntry": -1,
+			"UoMCode": "Manual",
+			"UnitsOfMeasurement": 1,
+			"___FK_c11b4407a3721b6b0d721a42": "1"
+		}],
+		"BASet": [{
+			"ID": "1",
+			"AgreementNo": 1,
+			"Nodes": [{
+				"ID": "R1",
+				"AgreementNo": 1
+			}, {
+				"ID": "R2",
+				"AgreementNo": 1
+			}, {
+				"ID": "R3",
+				"AgreementNo": 1
+			}, {
+				"ID": "R4",
+				"AgreementNo": 1
+			}]
+		}],
+		"DetailsLinesSet": [{
+			"ID": "A1",
+			"AgreementNo": 7,
+			"AgreementRowNumber": 1,
+			"AgreementEffectiveRowNumber": 1,
+			"Frequency": "Monthly",
+			"ReleaseInformation": null,
+			"Quantity": 10,
+			"Warehouse": null,
+			"FreeText": null,
+			"ConsumeSalesForecast": "YES",
+			"PlannedAmountLC": 0,
+			"PlannedAmountFC": 0,
+			"___FK_060c54d21d3b47200d721a42": null
+		}, {
+			"ID": "A2",
+			"AgreementNo": 7,
+			"AgreementRowNumber": 1,
+			"AgreementEffectiveRowNumber": 2,
+			"Frequency": "Quarterly",
+			"ReleaseInformation": null,
+			"Quantity": 30,
+			"Warehouse": null,
+			"FreeText": null,
+			"ConsumeSalesForecast": "YES",
+			"PlannedAmountLC": 0,
+			"PlannedAmountFC": 0,
+			"___FK_060c54d21d3b47200d721a42": null
+		}, {
+			"ID": "A3",
+			"AgreementNo": 7,
+			"AgreementRowNumber": 2,
+			"AgreementEffectiveRowNumber": 1,
+			"Frequency": "Monthly",
+			"ReleaseInformation": null,
+			"Quantity": 15,
+			"Warehouse": null,
+			"FreeText": null,
+			"ConsumeSalesForecast": "YES",
+			"PlannedAmountLC": 0,
+			"PlannedAmountFC": 0,
+			"___FK_060c54d21d3b47200d721a42": null
+		}, {
+			"ID": "A4",
+			"AgreementNo": 7,
+			"AgreementRowNumber": 2,
+			"AgreementEffectiveRowNumber": 2,
+			"Frequency": "Monthly",
+			"ReleaseInformation": null,
+			"Quantity": 10,
+			"Warehouse": null,
+			"FreeText": null,
+			"ConsumeSalesForecast": "YES",
+			"PlannedAmountLC": 0,
+			"PlannedAmountFC": 0,
+			"___FK_060c54d21d3b47200d721a42": null
+		}],
+		"StatuesSet": [{
+			"ID": "Approved"
+		}, {
+			"ID": "On Hold"
+		}, {
+			"ID": "Draft"
+		}, {
+			"ID": "Terminated"
+		}],
+		"BP_NameSet": [{
+			"ID": "Gummybear AG"
+		}],
+		"AgreeTypeSet": [{
+			"ID": "Specific"
+		}, {
+			"ID": "General"
+		}],
+		"UserSet": [{
+			"ID": "Jane"
+		}, {
+			"ID": "Allen"
+		}, {
+			"ID": "Roger"
+		}],
+		"ItemSet": [{
+			"ID": "IBM PC gen 9"
+		}, {
+			"ID": "Keyboard Mouse Combo EN"
+		}, {
+			"ID": "Monitor 27 inch"
+		}, {
+			"ID": "Samsung Galaxy S 20"
+		}],
+		"AgreeMethodSet": [{
+			"ID": "Items Method"
+		}, {
+			"ID": "Monetary Method"
+		}],
+		"BP_CodeSet": [{
+			"ID": "0080456"
+		}],
+		"Item_NoSet": [{
+			"ID": "PC 004"
+		}, {
+			"ID": "T 013"
+		}, {
+			"ID": "T 412"
+		}, {
+			"ID": "S 201"
 		}]
 	}
 }

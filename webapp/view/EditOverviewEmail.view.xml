@@ -1,0 +1,254 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.EditOverviewEmail" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="true" showHeaderContent="true" showAnchorBar="true" showFooter="false" subSectionLayout="TitleOnTop">
+        <uxap:headerContent/>
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader objectImageURI="sap-icon://switch-classes" objectTitle="{BPName}" objectSubtitle="{Description}" headerDesign="Light" objectImageShape="Circle" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" isActionAreaAlwaysVisible="true">
+                <uxap:actions>
+                    <Button text="Save" type="Transparent" icon="sap-icon://save" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <Button text="Cancel" type="Default" icon="sap-icon://sys-cancel" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                </uxap:actions>
+                <uxap:breadCrumbsLinks/>
+                <uxap:navigationBar>
+                    <Bar design="Auto">
+                        <contentLeft>
+                            <Button text="" type="Back" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress2"/>
+                        </contentLeft>
+                        <contentMiddle>
+                            <Title text="Edit Quotation" titleStyle="H5" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                        </contentMiddle>
+                        <contentRight/>
+                    </Bar>
+                </uxap:navigationBar>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:sections>
+            <uxap:ObjectPageSection showTitle="true" title="Page Section Title" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="General" mode="Expanded">
+                        <uxap:blocks>
+                            <form:Form width="100%" editable="true" visible="true">
+                                <form:title/>
+                                <form:formContainers>
+                                    <form:FormContainer visible="true">
+                                        <form:formElements>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="No." design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input value="{path: 'AgreementNo', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Status" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox selectedKey="{Status}" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{path:'/StatuesSet', templateShareable:true}">
+                                                        <items>
+                                                            <core:Item text="{ID}" enabled="true" key="{ID}"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="BP Name" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox selectedKey="{BPName}" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{path:'/BP_NameSet', templateShareable:true}">
+                                                        <items>
+                                                            <core:Item text="{ID}" enabled="true" key="{ID}"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="BP Code" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox selectedKey="{BPCode}" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{path:'/BP_CodeSet', templateShareable:true}">
+                                                        <items>
+                                                            <core:Item text="{ID}" enabled="true" key="{ID}"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Description" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input value="{Description}" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Start Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DatePicker value="{path: 'StartDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'medium' }}" width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="End Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DatePicker value="{path: 'EndDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'medium' }}" width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Termination Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DatePicker value="{TerminateDate}" width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Signing Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DatePicker value="{path: 'SigningDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'medium' }}" width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Agreement Method" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox selectedKey="{AgreementMethod}" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{path:'/AgreeMethodSet', templateShareable:true}">
+                                                        <items>
+                                                            <core:Item text="{ID}" enabled="true" key="{ID}"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Agreement Type" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox selectedKey="{AgreementType}" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{path:'/AgreeTypeSet', templateShareable:true}">
+                                                        <items>
+                                                            <core:Item text="{ID}" enabled="true" key="{ID}"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Settlement Probability" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input value="{SettlementProbability}" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Owner" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox selectedKey="{Owner}" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{path:'/UserSet', templateShareable:true}">
+                                                        <items>
+                                                            <core:Item text="{ID}" enabled="true" key="{ID}"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Remarks" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input value="{Remarks}" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                        </form:formElements>
+                                        <form:title/>
+                                    </form:FormContainer>
+                                </form:formContainers>
+                                <form:layout>
+                                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                                </form:layout>
+                            </form:Form>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection showTitle="true" title="Page Section Title" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Details" mode="Expanded">
+                        <uxap:blocks>
+                            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false" class="sapUiResponsiveMargin" items="{path:'ItemsLines', templateShareable:true}">
+                                <infoToolbar/>
+                                <headerToolbar/>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Item Description" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Item No." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Planned Quantitiy" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Unit Price" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Comment" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Active">
+                                        <cells>
+                                            <ComboBox selectedKey="{ItemDescription}" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{path:'/ItemSet', templateShareable:true}">
+                                                <items>
+                                                    <core:Item text="{ID}" enabled="true"/>
+                                                </items>
+                                            </ComboBox>
+                                            <ComboBox selectedKey="{ItemNo}" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{path:'/Item_NoSet', templateShareable:true}">
+                                                <items>
+                                                    <core:Item text="{ID}" enabled="true"/>
+                                                </items>
+                                            </ComboBox>
+                                            <Input value="{path: 'PlannedQuantity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                            <Input value="{path: 'UnitPrice', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                            <Input value="{FreeText}" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+        <uxap:footer/>
+    </uxap:ObjectPageLayout>
+</mvc:View>

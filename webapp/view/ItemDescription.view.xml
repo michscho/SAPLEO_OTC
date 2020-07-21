@@ -1,0 +1,47 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.ItemDescription" xmlns:uxap="sap.uxap" xmlns="sap.m">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="true" showHeaderContent="true" showAnchorBar="true" subSectionLayout="TitleOnTop">
+        <uxap:headerContent/>
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader objectImageURI="" objectTitle="{ItemDescription}" objectSubtitle="{ItemNo}" headerDesign="Light" objectImageShape="Square" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" isActionAreaAlwaysVisible="false">
+                <uxap:actions/>
+                <uxap:breadCrumbsLinks/>
+                <uxap:navigationBar>
+                    <Bar design="Auto">
+                        <contentLeft>
+                            <Button text="" type="Back" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                        </contentLeft>
+                        <contentMiddle/>
+                        <contentRight/>
+                    </Bar>
+                </uxap:navigationBar>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:sections>
+            <uxap:ObjectPageSection showTitle="true" title="Page Section Title" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Quotation item" mode="Expanded">
+                        <uxap:blocks>
+                            <ObjectListItem intro="" title="" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                <attributes>
+                                    <ObjectAttribute title="Item Description" text="{ItemDescription}" active="false" visible="true"/>
+                                    <ObjectAttribute title="Item No." text="{ItemNo}" active="false" visible="true"/>
+                                    <ObjectAttribute title="Planned Quantity" text="{path: 'PlannedQuantity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" active="false" visible="true"/>
+                                    <ObjectAttribute title="Unit Price" text="{path: 'UnitPrice', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" active="false" visible="true"/>
+                                    <ObjectAttribute title="Currency" text="{PriceCurrency}" active="false" visible="true"/>
+                                    <ObjectAttribute title="Cumulative Quantity" text="{path: 'CumulativeQuantity', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" active="false" visible="true"/>
+                                    <ObjectAttribute title="Free Text" text="{FreeText}" active="false" visible="true"/>
+                                </attributes>
+                                <firstStatus/>
+                                <secondStatus/>
+                            </ObjectListItem>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+        <uxap:footer/>
+    </uxap:ObjectPageLayout>
+</mvc:View>

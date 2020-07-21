@@ -451,31 +451,31 @@ sap.ui.define([
 				]["data"] = [{
 					"dim0": "Jan",
 					"mea0": "296",
-					"# Manually" : "196",
+					"# Manually": "196",
 					"# Automated": "100",
 					"__id": 0
 				}, {
 					"dim0": "Feb",
 					"mea0": "133",
-					"# Manually" : "83",
+					"# Manually": "83",
 					"# Automated": "50",
 					"__id": 1
 				}, {
 					"dim0": "Mar",
 					"mea0": "300",
-					"# Manually" : "150",
+					"# Manually": "150",
 					"# Automated": "150",
 					"__id": 2
 				}, {
 					"dim0": "Apr",
 					"mea0": "270",
-					"# Manually" : "90",
+					"# Manually": "90",
 					"# Automated": "180",
 					"__id": 3
 				}, {
 					"dim0": "May",
 					"mea0": "350",
-					"# Manually" : "130",
+					"# Manually": "130",
 					"# Automated": "220",
 					"__id": 4
 				}];
