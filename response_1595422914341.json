@@ -1,0 +1,144 @@
+{
+  "status": "DONE",
+  "id": "660ff582-5414-452f-b5e3-78dc5269334f",
+  "fileName": "Inquiry_The Real Company.pdf",
+  "documentType": "invoice",
+  "created": "2020-07-22T13:01:34.718785+00:00",
+  "finished": "2020-07-22T13:01:49.801860+00:00",
+  "country": "XX",
+  "extraction": {
+    "headerFields": [
+      {
+        "name": "currencyCode",
+        "category": "amounts",
+        "value": "USD",
+        "type": "string",
+        "confidence": 0.965856552124023,
+        "page": 1,
+        "coordinates": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      {
+        "name": "documentDate",
+        "category": "document",
+        "value": "2020-01-05",
+        "type": "date",
+        "confidence": 0.607505464553833,
+        "page": 1,
+        "coordinates": {
+          "x": 0.724304715840387,
+          "y": 0.18842645381984,
+          "w": 0.0830310358726321,
+          "h": 0.00826681870011403
+        }
+      },
+      {
+        "name": "documentNumber",
+        "category": "document",
+        "value": "33131",
+        "type": "string",
+        "confidence": 0.0667253832022349,
+        "page": 1,
+        "coordinates": {
+          "x": 0.421201128577187,
+          "y": 0.172462941847206,
+          "w": 0.0411124546553809,
+          "h": 0.00769669327251996
+        }
+      },
+      {
+        "name": "grossAmount",
+        "category": "amounts",
+        "value": 8.5,
+        "type": "number",
+        "confidence": 0.866423934698105,
+        "page": 1,
+        "coordinates": {
+          "x": 0.523579201934704,
+          "y": 0.354618015963512,
+          "w": 0.0310358726320032,
+          "h": 0.00997719498289629
+        }
+      },
+      {
+        "name": "netAmount",
+        "category": "amounts",
+        "value": 8.5,
+        "type": "number",
+        "confidence": 0.0153659582138062,
+        "page": 1,
+        "coordinates": {
+          "x": 0.523579201934704,
+          "y": 0.354618015963512,
+          "w": 0.0310358726320032,
+          "h": 0.00997719498289629
+        }
+      },
+      {
+        "name": "receiverAddress",
+        "category": "receiver",
+        "value": "Cherry San Bruno, USA",
+        "type": "string",
+        "confidence": 0.353383596764789,
+        "page": 1,
+        "coordinates": {
+          "x": 0.119709794437727,
+          "y": 0.205245153933865,
+          "w": 0.0798065296251511,
+          "h": 0.0433295324971494
+        }
+      },
+      {
+        "name": "receiverContact",
+        "category": "receiver",
+        "value": "Tim Snape",
+        "type": "string",
+        "confidence": 0,
+        "page": 1,
+        "coordinates": {
+          "x": 0.118903667875857,
+          "y": 0.531071835803877,
+          "w": 0.0777912132204756,
+          "h": 0.0108323831242873
+        }
+      },
+      {
+        "name": "senderAddress",
+        "category": "sender",
+        "value": "33131 Miami Avenue 901 San Bruno, CA 94066",
+        "type": "string",
+        "confidence": 0.666125793009996,
+        "page": 1,
+        "coordinates": {
+          "x": 0.119709794437727,
+          "y": 0.172462941847206,
+          "w": 0.389762192664248,
+          "h": 0.0604332953249715
+        }
+      },
+      {
+        "name": "senderName",
+        "category": "sender",
+        "value": "A",
+        "type": "string",
+        "confidence": 0.25055763613094,
+        "page": 1,
+        "coordinates": {
+          "x": 0.141878274889158,
+          "y": 0.104903078677309,
+          "w": 0.0588472390165256,
+          "h": 0.032497149372862
+        }
+      }
+    ],
+    "lineItems": []
+  },
+  "enrichment": {
+    "sender": [],
+    "employee": []
+  }
+}
