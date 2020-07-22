@@ -72,7 +72,7 @@
                     <Title text="Header Form"/>
                     <HBox>
                         <items>
-                            <Label text="SenderAddress"/>
+                            <Label text="Sender Address"/>
                             <Label text=":" class="sapUiTinyMarginEnd"/>
                             <ObjectStatus text="{Sender/Address}" state="Success"/>
                         </items>
@@ -305,7 +305,7 @@
                                     </Column>
                                     <Column width="auto" hAlign="Right" minScreenWidth="Phone">
                                         <header>
-                                            <Text text="NetAmount (0.633%)" width="auto"/>
+                                            <Text text="Net Amount (0.633%)" width="auto"/>
                                         </header>
                                     </Column>
                                 </columns>

@@ -606,7 +606,7 @@
 							</Table>
 						</content>
 					</IconTabFilter>
-					<IconTabFilter icon="" iconColor="Default" text="Manuel" count="5" design="Vertical" showAll="false" textDirection="Inherit" enabled="true"
+					<IconTabFilter icon="" iconColor="Default" text="Manual" count="5" design="Vertical" showAll="false" textDirection="Inherit" enabled="true"
 						visible="true" iconDensityAware="false">
 						<content>
 							<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
@@ -745,7 +745,7 @@
 							</Table>
 						</content>
 					</IconTabFilter>
-					<IconTabFilter icon="" iconColor="Default" text="Manuel work needed" count="2" design="Vertical" showAll="false" textDirection="Inherit"
+					<IconTabFilter icon="" iconColor="Default" text="Manual work needed" count="2" design="Vertical" showAll="false" textDirection="Inherit"
 						enabled="true" visible="true" iconDensityAware="false">
 						<content>
 							<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"

@@ -90,7 +90,7 @@
                                 <items>
                                     <HBox alignItems="Center" justifyContent="SpaceBetween" alignContent="Stretch" width="20rem" class="sapUiSmallMargin">
                                         <items>
-                                            <Label text="Time saving" required="false"/>
+                                            <Label text="Total Time saved in hours per day" required="false"/>
                                             <Button icon="sap-icon://value-help" type="Transparent"/>
                                         </items>
                                     </HBox>
@@ -98,9 +98,9 @@
                                         <items>
                                             <microchart:InteractiveBarChart displayedBars="3" labelWidth="40%">
                                                 <microchart:bars>
-                                                    <microchart:InteractiveBarChartBar color="Neutral" label="Manuell" value="2.7" selected="false"/>
-                                                    <microchart:InteractiveBarChartBar color="Neutral" label="Partiell automated" value="2" selected="false"/>
-                                                    <microchart:InteractiveBarChartBar color="Neutral" label="Automated" value="0.8" selected="false"/>
+                                                    <microchart:InteractiveBarChartBar color="Neutral" label="Manual" value="4" selected="false"/>
+                                                    <microchart:InteractiveBarChartBar color="Neutral" label="Partial automated" value="10" selected="false"/>
+                                                    <microchart:InteractiveBarChartBar color="Neutral" label="Automated" value="22" selected="false"/>
                                                 </microchart:bars>
                                             </microchart:InteractiveBarChart>
                                         </items>
@@ -111,7 +111,7 @@
                                 <items>
                                     <HBox alignItems="Center" justifyContent="SpaceBetween" alignContent="Stretch" width="20rem" class="sapUiSmallMargin">
                                         <items>
-                                            <Label text="% of automated Inquiry" required="false"/>
+                                            <Label text="Automated inquiries in % per day" required="false"/>
                                             <Button icon="sap-icon://slim-arrow-down" type="Transparent"/>
                                         </items>
                                     </HBox>
@@ -119,9 +119,9 @@
                                         <items>
                                             <microchart:InteractiveDonutChart displayedSegments="3">
                                                 <microchart:segments>
-                                                    <microchart:InteractiveDonutChartSegment color="Neutral" label="Automated" value="5856.7" selected="false"/>
-                                                    <microchart:InteractiveDonutChartSegment color="Neutral" label="Partiell automated" value="301.1" selected="false"/>
-                                                    <microchart:InteractiveDonutChartSegment color="Neutral" label="Manuell" value="577.8" selected="false"/>
+                                                    <microchart:InteractiveDonutChartSegment color="Neutral" label="Manual" value="12" selected="false"/>
+                                                    <microchart:InteractiveDonutChartSegment color="Neutral" label="Partial automated" value="30" selected="false"/>
+                                                    <microchart:InteractiveDonutChartSegment color="Neutral" label="Automated" value="58" selected="false"/>
                                                 </microchart:segments>
                                             </microchart:InteractiveDonutChart>
                                         </items>
@@ -132,7 +132,7 @@
                                 <items>
                                     <HBox alignItems="Center" justifyContent="SpaceBetween" alignContent="Stretch" width="20rem" class="sapUiSmallMargin">
                                         <items>
-                                            <Label text="Saved money by Month | in thousand USD" required="false"/>
+                                            <Label text="Cost Savings in % per week" required="false"/>
                                             <Button icon="sap-icon://slim-arrow-down" type="Transparent"/>
                                         </items>
                                     </HBox>
@@ -140,12 +140,11 @@
                                         <items>
                                             <microchart:InteractiveLineChart displayedPoints="6">
                                                 <microchart:points>
-                                                    <microchart:InteractiveLineChartPoint color="Neutral" label="Jan" value="0.8" selected="false"/>
-                                                    <microchart:InteractiveLineChartPoint color="Neutral" label="Feb" value="1.5" selected="false"/>
-                                                    <microchart:InteractiveLineChartPoint color="Neutral" label="March" value="0.7" selected="false"/>
-                                                    <microchart:InteractiveLineChartPoint color="Neutral" label="Apr" value="1.5" selected="false"/>
-                                                    <microchart:InteractiveLineChartPoint color="Neutral" label="May" value="1.7" selected="false"/>
-                                                    <microchart:InteractiveLineChartPoint color="Neutral" label="June" value="0.6" selected="false"/>
+                                                    <microchart:InteractiveLineChartPoint color="Neutral" label="Mon" value="79" selected="false"/>
+                                                    <microchart:InteractiveLineChartPoint color="Neutral" label="Tue" value="78" selected="false"/>
+                                                    <microchart:InteractiveLineChartPoint color="Neutral" label="Wed" value="78" selected="false"/>
+                                                    <microchart:InteractiveLineChartPoint color="Neutral" label="Thu" value="77" selected="false"/>
+                                                    <microchart:InteractiveLineChartPoint color="Neutral" label="Fri" value="77" selected="false"/>
                                                 </microchart:points>
                                             </microchart:InteractiveLineChart>
                                         </items>
@@ -157,8 +156,6 @@
                     <OverflowToolbar visible="{= (${alpModel>/filterHeaderOption} === 'visual') }" style="Clear" class="sapSmartTemplatesAnalyticalListPageVisualFilterToolbar">
                         <content>
                             <ToolbarSpacer/>
-                            <Button text="Adapt Filters" type="Transparent"/>
-                            <Button text="Go" tooltip="filter" type="Emphasized"/>
                         </content>
                     </OverflowToolbar>
                 </f:content>
