@@ -1,0 +1,292 @@
+{
+  "data": {
+    "status": "DONE",
+    "id": "762cf44d-9310-4d06-bcae-53dd3e82667e",
+    "fileName": "sample-invoice-1.pdf",
+    "documentType": "invoice",
+    "created": "2020-06-20T11:36:17.604384+00:00",
+    "finished": "2020-06-20T11:36:41.871460+00:00",
+    "country": "XX",
+    "extraction": {
+      "headerFields": [
+        {
+          "name": "senderBankAccount",
+          "category": "sender",
+          "value": "#1234 1234",
+          "type": "string",
+          "confidence": 0.595460803897092,
+          "page": 1,
+          "coordinates": {
+            "x": 0.107258064516129,
+            "y": 0.571265678449259,
+            "w": 0.0818548387096774,
+            "h": 0.00798175598631701
+          },
+          "group": 1
+        },
+        {
+          "name": "paymentTerms",
+          "category": "payment",
+          "value": "within 30 days from date of invoice.",
+          "type": "string",
+          "confidence": 0.600183632029469,
+          "page": 1,
+          "coordinates": {
+            "x": 0.192741935483871,
+            "y": 0.863169897377423,
+            "w": 0.23508064516129,
+            "h": 0.0102622576966933
+          }
+        },
+        {
+          "name": "receiverAddress",
+          "category": "receiver",
+          "value": "123 Somewhere St Melbourne, VIC 3000",
+          "type": "string",
+          "confidence": 0.583759749726749,
+          "page": 1,
+          "coordinates": {
+            "x": 0.0729838709677419,
+            "y": 0.303591790193843,
+            "w": 0.138306451612903,
+            "h": 0.024230330672748
+          }
+        },
+        {
+          "name": "receiverName",
+          "category": "receiver",
+          "value": "Test Business",
+          "type": "string",
+          "confidence": 0.611305263969633,
+          "page": 1,
+          "coordinates": {
+            "x": 0.0717741935483871,
+            "y": 0.288768529076397,
+            "w": 0.092741935483871,
+            "h": 0.00798175598631695
+          }
+        },
+        {
+          "name": "documentNumber",
+          "category": "document",
+          "value": "INV-3337",
+          "type": "string",
+          "confidence": 0.655578176180522,
+          "page": 1,
+          "coordinates": {
+            "x": 0.760887096774194,
+            "y": 0.136830102622577,
+            "w": 0.0608870967741936,
+            "h": 0.00826681870011403
+          }
+        },
+        {
+          "name": "senderName",
+          "category": "sender",
+          "value": "Sliced Invoices",
+          "type": "string",
+          "confidence": 0.622503634861537,
+          "page": 1,
+          "coordinates": {
+            "x": 0.0713709677419355,
+            "y": 0.157069555302166,
+            "w": 0.100403225806452,
+            "h": 0.00798175598631698
+          }
+        },
+        {
+          "name": "grossAmount",
+          "category": "amounts",
+          "value": 93.5,
+          "type": "number",
+          "confidence": 0.656007407289563,
+          "page": 1,
+          "coordinates": {
+            "x": 0.870161290322581,
+            "y": 0.500285062713797,
+            "w": 0.0447580645161291,
+            "h": 0.00940706955530213
+          }
+        },
+        {
+          "name": "netAmount",
+          "category": "amounts",
+          "value": 85,
+          "type": "number",
+          "confidence": 0.640379481694915,
+          "page": 1,
+          "coordinates": {
+            "x": 0.870161290322581,
+            "y": 0.462656784492588,
+            "w": 0.0447580645161291,
+            "h": 0.00940706955530218
+          }
+        },
+        {
+          "name": "senderAddress",
+          "category": "sender",
+          "value": "Suite 5A-1204 123 Somewhere Street Your City AZ 12345",
+          "type": "string",
+          "confidence": 0.604115375524265,
+          "page": 1,
+          "coordinates": {
+            "x": 0.0721774193548387,
+            "y": 0.173318129988597,
+            "w": 0.150806451612903,
+            "h": 0.040193842645382
+          }
+        },
+        {
+          "name": "purchaseOrderNumber",
+          "category": "details",
+          "value": "12345",
+          "type": "string",
+          "confidence": 0,
+          "page": 1,
+          "coordinates": {
+            "x": 0.760887096774194,
+            "y": 0.155929304446978,
+            "w": 0.0391129032258065,
+            "h": 0.00741163055872293
+          }
+        },
+        {
+          "name": "currencyCode",
+          "category": "amounts",
+          "value": "USD",
+          "type": "string",
+          "confidence": 0.919029772281647,
+          "page": 1,
+          "coordinates": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0
+          }
+        },
+        {
+          "name": "documentDate",
+          "category": "document",
+          "value": "2016-01-25",
+          "type": "date",
+          "confidence": 0.983220152556896,
+          "page": 1,
+          "coordinates": {
+            "x": 0.759677419354839,
+            "y": 0.174458380843786,
+            "w": 0.113709677419355,
+            "h": 0.00997719498289626
+          }
+        },
+        {
+          "name": "taxRate",
+          "category": "amounts",
+          "value": 0,
+          "type": "number",
+          "confidence": 0.818773555755615,
+          "page": 1,
+          "coordinates": {
+            "x": 0.743548393249512,
+            "y": 0.420182436704636,
+            "w": 0.0411290526390076,
+            "h": 0.00769668817520142
+          },
+          "group": 1
+        }
+      ],
+      "lineItems": [
+        [
+          {
+            "name": "description",
+            "category": "details",
+            "value": "Web Design",
+            "type": "string",
+            "confidence": 0.607532440995177,
+            "page": 1,
+            "coordinates": {
+              "x": 0.172983870967742,
+              "y": 0.414196123147092,
+              "w": 0.0794354838709678,
+              "h": 0.0102622576966933
+            }
+          },
+          {
+            "name": "quantity",
+            "category": "details",
+            "value": 1,
+            "type": "number",
+            "confidence": 0.637105987185524,
+            "page": 1,
+            "coordinates": {
+              "x": 0.102822580645161,
+              "y": 0.42018244013683,
+              "w": 0.0270161290322581,
+              "h": 0.00769669327251998
+            }
+          },
+          {
+            "name": "netAmount",
+            "category": "amounts",
+            "value": 85,
+            "type": "number",
+            "confidence": 0.63384593074972,
+            "page": 1,
+            "coordinates": {
+              "x": 0.870161290322581,
+              "y": 0.419612314709236,
+              "w": 0.0447580645161291,
+              "h": 0.00940706955530213
+            }
+          },
+          {
+            "name": "unitPrice",
+            "category": "details",
+            "value": 85,
+            "type": "number",
+            "confidence": 0.635079596981858,
+            "page": 1,
+            "coordinates": {
+              "x": 0.610483870967742,
+              "y": 0.419612314709236,
+              "w": 0.0447580645161291,
+              "h": 0.00940706955530213
+            }
+          }
+        ]
+      ]
+    },
+    "enrichment": {
+      "sender": [],
+      "employee": []
+    }
+  },
+  "status": 200,
+  "statusText": "OK",
+  "headers": {
+    "content-length": "4561",
+    "content-type": "application/json"
+  },
+  "config": {
+    "url": "https://aiservices-trial-dox.cfapps.eu10.hana.ondemand.com/document-information-extraction/v1/document/jobs/762cf44d-9310-4d06-bcae-53dd3e82667e",
+    "method": "get",
+    "params": {
+      "clientId": "c_00"
+    },
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vc3ViYWNjLXN1YmRvbWFpbi5hdXRoZW50aWNhdGlvbi5ldTEwLmhhbmEub25kZW1hbmQuY29tL3Rva2VuX2tleXMiLCJraWQiOiJrZXktaWQtMSIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2OGI0ZmQ2YzAzNDA0ZDI4YTk5MmVhMmMzN2VlZDM5MCIsImV4dF9hdHRyIjp7ImVuaGFuY2VyIjoiWFNVQUEiLCJ6ZG4iOiJzdWJhY2Mtc3ViZG9tYWluIiwic2VydmljZWluc3RhbmNlaWQiOiI3MGM4MTkyNC00M2RiLTQ2MzItOWZiNC1kY2QxYWJhMzk0YjIifSwic3ViIjoic2ItNzBjODE5MjQtNDNkYi00NjMyLTlmYjQtZGNkMWFiYTM5NGIyIWI0OTQzM3xuYS05ZTUwNDk5Zi03OGRkLTQwY2EtYWQ4ZC02MGFjZjAyY2ZmOGIhYjMwNDE3IiwiYXV0aG9yaXRpZXMiOlsidWFhLnJlc291cmNlIiwibmEtOWU1MDQ5OWYtNzhkZC00MGNhLWFkOGQtNjBhY2YwMmNmZjhiIWIzMDQxNy50ZWNobmljYWxzY29wZSJdLCJzY29wZSI6WyJ1YWEucmVzb3VyY2UiLCJuYS05ZTUwNDk5Zi03OGRkLTQwY2EtYWQ4ZC02MGFjZjAyY2ZmOGIhYjMwNDE3LnRlY2huaWNhbHNjb3BlIl0sImNsaWVudF9pZCI6InNiLTcwYzgxOTI0LTQzZGItNDYzMi05ZmI0LWRjZDFhYmEzOTRiMiFiNDk0MzN8bmEtOWU1MDQ5OWYtNzhkZC00MGNhLWFkOGQtNjBhY2YwMmNmZjhiIWIzMDQxNyIsImNpZCI6InNiLTcwYzgxOTI0LTQzZGItNDYzMi05ZmI0LWRjZDFhYmEzOTRiMiFiNDk0MzN8bmEtOWU1MDQ5OWYtNzhkZC00MGNhLWFkOGQtNjBhY2YwMmNmZjhiIWIzMDQxNyIsImF6cCI6InNiLTcwYzgxOTI0LTQzZGItNDYzMi05ZmI0LWRjZDFhYmEzOTRiMiFiNDk0MzN8bmEtOWU1MDQ5OWYtNzhkZC00MGNhLWFkOGQtNjBhY2YwMmNmZjhiIWIzMDQxNyIsImdyYW50X3R5cGUiOiJjbGllbnRfY3JlZGVudGlhbHMiLCJyZXZfc2lnIjoiYTE3ZGQxYjQiLCJpYXQiOjE1OTI5ODMwNjUsImV4cCI6MTU5MzAyNjI2NSwiaXNzIjoiaHR0cDovL3N1YmFjYy1zdWJkb21haW4ubG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoiYWI1YmJiNDEtNzhlMS00ODFmLThkZWEtMDE4NThmOTc0MTJmIiwiYXVkIjpbInVhYSIsInNiLTcwYzgxOTI0LTQzZGItNDYzMi05ZmI0LWRjZDFhYmEzOTRiMiFiNDk0MzN8bmEtOWU1MDQ5OWYtNzhkZC00MGNhLWFkOGQtNjBhY2YwMmNmZjhiIWIzMDQxNyIsIm5hLTllNTA0OTlmLTc4ZGQtNDBjYS1hZDhkLTYwYWNmMDJjZmY4YiFiMzA0MTciXX0.QN3TcASjhFhgImARWVjdWjUbGa9_mw2SBE0ULTKqQDsFq0e-mhcWlXvCUtRxuvipnHr1AGN2P5fPtkVkGDOpuYHY2GkLP7bDrXCvSQmMo2wszJzihIjvy6br6BH5ZLaB_yLmuG7QEmqD4dXI3_8xsEW2NFXjcTuKFfbKfUzL4_8NOX7xFdxQue0wTMLSNDO8YRhOgAFc18ly92_EARNLC94g2EvlYjkjRO0ZRbNk6nEZUmYQN44vwcSrV6mCjcdr8PmflUhuCvDJe2BtEXLBJmECvOdtSXEwXAQLp8NX8fR5o1qSfep--X3ZGR1et5dNhlqTd5Jf8G6SXrAcQz6yVRvjFQa8Ht5L0_pBldkthaYfZL6160rPoJIAhLUk6oOHt5j6QwHGvk0cfMZFZR98u2Zr4b787XYL-48G9seie9xu1U99HXOL5iwiBoO4syJ-IA2u3vQMNvLo6-LW2tara8qpEBiD_UNhrBchA7BYWVseGv2oix8OLIYuEqlHq80X5HLVgZtmtK_y8yBO5W3IAlR6XI3ztB2XJDfJnS8Z6Zhtj55TMrEHzn2M1Qvbh7czlp3L-7CwUCqAGGDoQYSSyUemnLFIOUKItCcxtNjZVzx2j92NlOfvl345KFv8-GLAv0Z_0GghIK0jmHiAypYKxOaLH1Q9XUPMCV8qe65Uirc",
+      "Access-Control-Allow-Origin": "*"
+    },
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1
+  },
+  "request": {}
+}

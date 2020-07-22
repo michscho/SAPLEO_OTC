@@ -1,10 +1,10 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.OverviewEmail" xmlns:uxap="sap.uxap" xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns="sap.m" controllerName="com.sap.build.standard.otcOptimization.controller.OverviewEmail">
     <uxap:ObjectPageLayout showTitleInHeaderContent="true" showHeaderContent="true" showAnchorBar="true" subSectionLayout="TitleOnTop">
         <uxap:headerContent/>
         <uxap:headerTitle>
             <uxap:ObjectPageHeader objectImageURI="sap-icon://kpi-managing-my-area" objectTitle="{BPName}" objectSubtitle="{Description}" headerDesign="Light" objectImageShape="Circle" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" isActionAreaAlwaysVisible="true">
                 <uxap:actions>
-                    <Button text="Edit" type="Transparent" icon="sap-icon://edit" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Inbox" type="Transparent" icon="sap-icon://edit" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Inbox'\}\}\}"/>
                 </uxap:actions>
                 <uxap:breadCrumbsLinks/>
                 <uxap:navigationBar>
@@ -121,4 +121,5 @@
         </uxap:sections>
         <uxap:footer/>
     </uxap:ObjectPageLayout>
+    <Button xmlns="sap.m" text="Button" id="button12"/>
 </mvc:View>

@@ -1,0 +1,116 @@
+{
+  "status": "DONE",
+  "id": "1e82327f-13c4-4cbe-9acd-b8bc1d0c1833",
+  "fileName": "Inquiry_Owl.Company.pdf",
+  "documentType": "invoice",
+  "created": "2020-07-22T12:59:36.362544+00:00",
+  "finished": "2020-07-22T12:59:51.721974+00:00",
+  "country": "CA",
+  "extraction": {
+    "headerFields": [
+      {
+        "name": "currencyCode",
+        "category": "amounts",
+        "value": "USD",
+        "type": "string",
+        "confidence": 0.630758464336395,
+        "page": 1,
+        "coordinates": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      {
+        "name": "documentNumber",
+        "category": "document",
+        "value": "The Owl-Company",
+        "type": "string",
+        "confidence": 0.00131564401090145,
+        "page": 1,
+        "coordinates": {
+          "x": 0.592906086255542,
+          "y": 0.0493299116053607,
+          "w": 0.20596533655784,
+          "h": 0.0165383518676932
+        }
+      },
+      {
+        "name": "grossAmount",
+        "category": "amounts",
+        "value": 1200,
+        "type": "number",
+        "confidence": 0.00124186277389526,
+        "page": 1,
+        "coordinates": {
+          "x": 0.332527206771463,
+          "y": 0.238950670088395,
+          "w": 0.0390971382507053,
+          "h": 0.0082691759338466
+        }
+      },
+      {
+        "name": "netAmount",
+        "category": "amounts",
+        "value": 193625,
+        "type": "number",
+        "confidence": 0.00213782986005147,
+        "page": 1,
+        "coordinates": {
+          "x": 0.211608222490931,
+          "y": 0.458796692329626,
+          "w": 0.0540104796453043,
+          "h": 0.00826917593384663
+        }
+      },
+      {
+        "name": "receiverContact",
+        "category": "receiver",
+        "value": "Benjamin Todd",
+        "type": "string",
+        "confidence": 0,
+        "page": 1,
+        "coordinates": {
+          "x": 0.120515920999597,
+          "y": 0.564870259481038,
+          "w": 0.110036275695284,
+          "h": 0.0111206159110351
+        }
+      },
+      {
+        "name": "senderAddress",
+        "category": "sender",
+        "value": "Winter Haven, FL 33880",
+        "type": "string",
+        "confidence": 0.503252560148636,
+        "page": 1,
+        "coordinates": {
+          "x": 0.119306731156792,
+          "y": 0.414599372683205,
+          "w": 0.178960096735187,
+          "h": 0.0102651839178785
+        }
+      },
+      {
+        "name": "senderName",
+        "category": "sender",
+        "value": "The",
+        "type": "string",
+        "confidence": 0.439284592866898,
+        "page": 1,
+        "coordinates": {
+          "x": 0.592906086255542,
+          "y": 0.0493299116053607,
+          "w": 0.0407093913744458,
+          "h": 0.0134017678927859
+        }
+      }
+    ],
+    "lineItems": []
+  },
+  "enrichment": {
+    "sender": [],
+    "employee": []
+  }
+}

@@ -1,0 +1,477 @@
+{
+  "status": "DONE",
+  "id": "4de52aae-20ec-45b7-bb66-1d683aa23f17",
+  "fileName": "Inquiry_Gummybear.pdf",
+  "documentType": "invoice",
+  "created": "2020-07-22T12:49:52.116550+00:00",
+  "finished": "2020-07-22T12:50:06.859605+00:00",
+  "country": "XX",
+  "extraction": {
+    "headerFields": [
+      {
+        "name": "currencyCode",
+        "category": "amounts",
+        "value": "EUR",
+        "type": "string",
+        "confidence": 0.325740247964859,
+        "page": 1,
+        "coordinates": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      {
+        "name": "documentDate",
+        "category": "document",
+        "value": "2020-04-15",
+        "type": "date",
+        "confidence": 0.642810609936714,
+        "page": 1,
+        "coordinates": {
+          "x": 0.723901652559452,
+          "y": 0.29418472063854,
+          "w": 0.079403466344216,
+          "h": 0.0114025085518815
+        }
+      },
+      {
+        "name": "documentNumber",
+        "category": "document",
+        "value": "/",
+        "type": "string",
+        "confidence": 0.0715568661689758,
+        "page": 1,
+        "coordinates": {
+          "x": 0.145102781136638,
+          "y": 0.130843785632839,
+          "w": 0.0213623538895606,
+          "h": 0.0216647662485747
+        }
+      },
+      {
+        "name": "grossAmount",
+        "category": "amounts",
+        "value": 3600,
+        "type": "number",
+        "confidence": 0.498367613554001,
+        "page": 1,
+        "coordinates": {
+          "x": 0.751309955663039,
+          "y": 0.459521094640821,
+          "w": 0.0411124546553809,
+          "h": 0.00997719498289623
+        }
+      },
+      {
+        "name": "netAmount",
+        "category": "amounts",
+        "value": 1200,
+        "type": "number",
+        "confidence": 0.0235387235879898,
+        "page": 1,
+        "coordinates": {
+          "x": 0.474002418379686,
+          "y": 0.458095781071836,
+          "w": 0.0544135429262395,
+          "h": 0.0114025085518814
+        }
+      },
+      {
+        "name": "purchaseOrderNumber",
+        "category": "details",
+        "value": "PC 004",
+        "type": "string",
+        "confidence": 0,
+        "page": 1,
+        "coordinates": {
+          "x": 0.13018943974204,
+          "y": 0.409920182440137,
+          "w": 0.0495767835550181,
+          "h": 0.00826681870011403
+        }
+      },
+      {
+        "name": "receiverAddress",
+        "category": "receiver",
+        "value": "FarFarAway 17 Los Angeles 12504 Eurasien",
+        "type": "string",
+        "confidence": 0.586479381059205,
+        "page": 1,
+        "coordinates": {
+          "x": 0.120515920999597,
+          "y": 0.209521094640821,
+          "w": 0.137041515517936,
+          "h": 0.0427594070695553
+        }
+      },
+      {
+        "name": "receiverName",
+        "category": "receiver",
+        "value": "Gummybear AG",
+        "type": "string",
+        "confidence": 0.609297461224639,
+        "page": 1,
+        "coordinates": {
+          "x": 0.119709794437727,
+          "y": 0.191562143671608,
+          "w": 0.118500604594921,
+          "h": 0.0114025085518814
+        }
+      },
+      {
+        "name": "senderAddress",
+        "category": "sender",
+        "value": "FarFarAway 17 Los Angeles 12504 Eurasien",
+        "type": "string",
+        "confidence": 0.600715265946105,
+        "page": 1,
+        "coordinates": {
+          "x": 0.120515920999597,
+          "y": 0.914196123147092,
+          "w": 0.137041515517936,
+          "h": 0.0404789053591791
+        }
+      },
+      {
+        "name": "senderBankAccount",
+        "category": "sender",
+        "value": "LA 20 524 682 957 000 0001",
+        "type": "string",
+        "confidence": 0.646949624224585,
+        "page": 1,
+        "coordinates": {
+          "x": 0.432889963724305,
+          "y": 0.898232611174458,
+          "w": 0.209995969367191,
+          "h": 0.00855188141391106
+        },
+        "group": 1
+      },
+      {
+        "name": "senderName",
+        "category": "sender",
+        "value": "Gummybear AG",
+        "type": "string",
+        "confidence": 0.583101550392483,
+        "page": 1,
+        "coordinates": {
+          "x": 0.119709794437727,
+          "y": 0.897662485746864,
+          "w": 0.118500604594921,
+          "h": 0.0114025085518814
+        }
+      },
+      {
+        "name": "taxId",
+        "category": "amounts",
+        "value": "3216",
+        "type": "string",
+        "confidence": 0.636521839433246,
+        "page": 1,
+        "coordinates": {
+          "x": 0.525997581620314,
+          "y": 0.930159635119726,
+          "w": 0.0362756952841596,
+          "h": 0.00855188141391106
+        },
+        "group": 1
+      }
+    ],
+    "lineItems": [
+      [
+        {
+          "name": "description",
+          "category": "details",
+          "value": "IBM PC gen 9",
+          "type": "string",
+          "confidence": 0.601999014793407,
+          "page": 1,
+          "coordinates": {
+            "x": 0.288996372430472,
+            "y": 0.409920182440137,
+            "w": 0.0971382507053607,
+            "h": 0.0108323831242874
+          }
+        },
+        {
+          "name": "materialNumber",
+          "category": "details",
+          "value": "PC 004",
+          "type": "string",
+          "confidence": 0.514513049948783,
+          "page": 1,
+          "coordinates": {
+            "x": 0.13018943974204,
+            "y": 0.409920182440137,
+            "w": 0.0499798468359532,
+            "h": 0.00855188141391106
+          }
+        },
+        {
+          "name": "quantity",
+          "category": "details",
+          "value": 50,
+          "type": "number",
+          "confidence": 0.620510518550873,
+          "page": 1,
+          "coordinates": {
+            "x": 0.594518339379283,
+            "y": 0.409920182440137,
+            "w": 0.0177347843611447,
+            "h": 0.00855188141391106
+          }
+        },
+        {
+          "name": "netAmount",
+          "category": "amounts",
+          "value": 27500,
+          "type": "number",
+          "confidence": 0.624214951808636,
+          "page": 1,
+          "coordinates": {
+            "x": 0.751713018943974,
+            "y": 0.409920182440137,
+            "w": 0.0503829101168883,
+            "h": 0.0102622576966933
+          }
+        },
+        {
+          "name": "unitPrice",
+          "category": "details",
+          "value": 550,
+          "type": "number",
+          "confidence": 0.342454969084689,
+          "page": 1,
+          "coordinates": {
+            "x": 0.474002418379686,
+            "y": 0.408494868871152,
+            "w": 0.0411124546553809,
+            "h": 0.0114025085518814
+          }
+        }
+      ],
+      [
+        {
+          "name": "description",
+          "category": "details",
+          "value": "Keyboard + Mouse EN",
+          "type": "string",
+          "confidence": 0.598234841463148,
+          "page": 1,
+          "coordinates": {
+            "x": 0.288996372430472,
+            "y": 0.425883694412771,
+            "w": 0.163240628778718,
+            "h": 0.0114025085518814
+          }
+        },
+        {
+          "name": "materialNumber",
+          "category": "details",
+          "value": "T 013",
+          "type": "string",
+          "confidence": 0.568094574742847,
+          "page": 1,
+          "coordinates": {
+            "x": 0.128577186618299,
+            "y": 0.426453819840365,
+            "w": 0.0407093913744458,
+            "h": 0.00855188141391106
+          }
+        },
+        {
+          "name": "quantity",
+          "category": "details",
+          "value": 55,
+          "type": "number",
+          "confidence": 0.56364449262619,
+          "page": 1,
+          "coordinates": {
+            "x": 0.594518339379283,
+            "y": 0.426453819840365,
+            "w": 0.0173317210802096,
+            "h": 0.00855188141391106
+          }
+        },
+        {
+          "name": "netAmount",
+          "category": "amounts",
+          "value": 3300,
+          "type": "number",
+          "confidence": 0.626986851746386,
+          "page": 1,
+          "coordinates": {
+            "x": 0.751309955663039,
+            "y": 0.426453819840365,
+            "w": 0.041515517936316,
+            "h": 0.0102622576966933
+          }
+        },
+        {
+          "name": "unitPrice",
+          "category": "details",
+          "value": 60,
+          "type": "number",
+          "confidence": 0.483434513832132,
+          "page": 1,
+          "coordinates": {
+            "x": 0.474002418379686,
+            "y": 0.42502850627138,
+            "w": 0.0314389359129383,
+            "h": 0.0114025085518814
+          }
+        }
+      ],
+      [
+        {
+          "name": "description",
+          "category": "details",
+          "value": "Monitor 27 inch",
+          "type": "string",
+          "confidence": 0.604915378049568,
+          "page": 1,
+          "coordinates": {
+            "x": 0.288996372430472,
+            "y": 0.442417331812999,
+            "w": 0.118097541313986,
+            "h": 0.0091220068415051
+          }
+        },
+        {
+          "name": "materialNumber",
+          "category": "details",
+          "value": "T412",
+          "type": "string",
+          "confidence": 0.602722841501236,
+          "page": 1,
+          "coordinates": {
+            "x": 0.128577186618299,
+            "y": 0.442987457240593,
+            "w": 0.0411124546553809,
+            "h": 0.00855188141391106
+          }
+        },
+        {
+          "name": "quantity",
+          "category": "details",
+          "value": 45,
+          "type": "number",
+          "confidence": 0.548058455189069,
+          "page": 1,
+          "coordinates": {
+            "x": 0.594115276098347,
+            "y": 0.442987457240593,
+            "w": 0.0177347843611447,
+            "h": 0.00855188141391106
+          }
+        },
+        {
+          "name": "netAmount",
+          "category": "amounts",
+          "value": 9900,
+          "type": "number",
+          "confidence": 0.634854351029252,
+          "page": 1,
+          "coordinates": {
+            "x": 0.751309955663039,
+            "y": 0.442987457240593,
+            "w": 0.041515517936316,
+            "h": 0.0102622576966933
+          }
+        },
+        {
+          "name": "unitPrice",
+          "category": "details",
+          "value": 220,
+          "type": "number",
+          "confidence": 0.606380680745298,
+          "page": 1,
+          "coordinates": {
+            "x": 0.474002418379686,
+            "y": 0.441562143671608,
+            "w": 0.0411124546553809,
+            "h": 0.0114025085518815
+          }
+        }
+      ],
+      [
+        {
+          "name": "description",
+          "category": "details",
+          "value": "Samsung Galaxy S20",
+          "type": "string",
+          "confidence": 0.619009555588571,
+          "page": 1,
+          "coordinates": {
+            "x": 0.288190245868601,
+            "y": 0.458950969213227,
+            "w": 0.156388553002821,
+            "h": 0.0114025085518814
+          }
+        },
+        {
+          "name": "materialNumber",
+          "category": "details",
+          "value": "S201",
+          "type": "string",
+          "confidence": 0.598177264134089,
+          "page": 1,
+          "coordinates": {
+            "x": 0.129383313180169,
+            "y": 0.459521094640821,
+            "w": 0.0395002015316405,
+            "h": 0.00855188141391106
+          }
+        },
+        {
+          "name": "quantity",
+          "category": "details",
+          "value": 3,
+          "type": "number",
+          "confidence": 0.550651570161184,
+          "page": 1,
+          "coordinates": {
+            "x": 0.594518339379283,
+            "y": 0.459521094640821,
+            "w": 0.00806126561870213,
+            "h": 0.00855188141391106
+          }
+        },
+        {
+          "name": "netAmount",
+          "category": "amounts",
+          "value": 3600,
+          "type": "number",
+          "confidence": 0.622556403279305,
+          "page": 1,
+          "coordinates": {
+            "x": 0.751309955663039,
+            "y": 0.459521094640821,
+            "w": 0.041515517936316,
+            "h": 0.0102622576966933
+          }
+        },
+        {
+          "name": "unitPrice",
+          "category": "details",
+          "value": 1200,
+          "type": "number",
+          "confidence": 0.636081644466945,
+          "page": 1,
+          "coordinates": {
+            "x": 0.474002418379686,
+            "y": 0.458095781071836,
+            "w": 0.0548166062071745,
+            "h": 0.0116875712656784
+          }
+        }
+      ]
+    ]
+  },
+  "enrichment": {
+    "sender": [],
+    "employee": []
+  }
+}

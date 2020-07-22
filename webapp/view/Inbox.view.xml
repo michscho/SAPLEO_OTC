@@ -1,4 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.Inbox" xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.build.standard.otcOptimization.controller.Inbox">
     <Page title="Inbox" showHeader="true" showFooter="true" showNavButton="false">
         <content>
             <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" items="{path:'/BASet', templateShareable:true}">
@@ -12,12 +12,12 @@
                 <headerToolbar>
                     <Toolbar enabled="true" visible="true" width="" design="Solid">
                         <content>
-                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%" search="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'search':\{'navigation':\{'routeName':'OverviewEmail'\}\}\}"/>
                         </content>
                     </Toolbar>
                 </headerToolbar>
                 <items>
-                    <ObjectListItem intro="{path: 'AgreementNo', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" title="{BPName}" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false">
+                    <ObjectListItem xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" intro="{path: 'AgreementNo', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" title="{BPName}" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false" detailPress="action" action:wiring="\{'detailPress':\{'navigation':\{'routeName':'OverviewEmail'\}\},'press':\{'navigation':\{'routeName':'OverviewEmail'\}\}\}" press="action">
                         <attributes>
                             <ObjectAttribute title="Status" text="{Status}" active="false" visible="true"/>
                         </attributes>
@@ -31,10 +31,12 @@
             <OverflowToolbar width="100%" height="auto" design="Auto" enabled="true" visible="true">
                 <content>
                     <ToolbarSpacer width=""/>
-                    <Button text="New" type="Default" icon="sap-icon://add" iconFirst="false" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="New" type="Default" icon="sap-icon://add" iconFirst="false" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
                 </content>
             </OverflowToolbar>
         </footer>
-        <headerContent/>
+        <headerContent>
+            <Button xmlns="sap.m" text="Connect your Inbox" id="button1"/>
+        </headerContent>
     </Page>
 </mvc:View>

@@ -70,7 +70,8 @@ async function postDocument(pdfData) {
         data: pdfData
     })
         .then(response => {
-        console.log(response);
+        	
+        console.log(fetchDocument(response.data.id));
     })
         .catch(error => {
             console.log(error)
@@ -78,11 +79,30 @@ async function postDocument(pdfData) {
 }
 
 /**
+ * Getting response of Document with specific ID
+ */
+async function fetchDocument(idDoc) {
+    let response = await getToken();
+    const id = '/' + idDoc;
+    return axios({
+        url: jobsUrl + id,
+        method: 'get',
+        headers: {
+            Authorization: "Bearer " + response.data.access_token,
+            "Access-Control-Allow-Origin": "*"
+        },
+        params: {
+            clientId: 'c_00',
+        }
+    });
+}
+
+/**
  * Getting response of Document
  */
 async function fetchDocument() {
     let response = await getToken();
-    const id = '/7cbb6bb7-8656-4140-9b06-8c3cc391f503';
+    const id = '/1fe1be3c-9e9e-4646-9875-fc60617548ce';
     return axios({
         url: jobsUrl + id,
         method: 'get',
@@ -115,7 +135,7 @@ sap.ui.define([
 	var ListMode = MobileLibrary.ListMode,
 		ListSeparators = MobileLibrary.ListSeparators;
 
-	return Controller.extend("sap.m.sample.UploadCollection.Page", {
+	return Controller.extend("com.sap.build.standard.otcOptimization.controller.UploadQuotation", {
 		onInit: function() {
 			
 			// set mock data
@@ -226,7 +246,7 @@ sap.ui.define([
 			
 			
 			
-        	//postDocument(data);
+        	postDocument(data);
 			//console.log(data);
 			// Header Token
 			var oCustomerHeaderToken = new UploadCollectionParameter({
@@ -400,7 +420,7 @@ sap.ui.define([
 
 		getAttachmentTitleText: function() {
 			var aItems = this.byId("UploadCollection").getItems();
-			return "Uploaded (" + aItems.length + ")";
+			return "Currently Uploading (" + aItems.length + ")";
 		},
 
 		onModeChange: function(oEvent) {
