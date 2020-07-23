@@ -7,14 +7,14 @@
                         <content>
                             <Panel height="auto" width="1275px" headerText="Time" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
                                 <content>
-                                    <Panel height="auto" width="1259px" headerText="Total Time Automized in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                    <Panel height="auto" width="1259px" headerText="Total Time Automized in hours" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
                                         <content>
                                             <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276706239-content-sap_m_Panel-1-content-sap_chart_LineChart-1" width="1236px" height="450px" visibleDimensions="__id" visibleMeasures="Total Time Automized" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-1-content-sap_m_Panel-1594276706239-content-sap_m_Panel-1-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
                                                 <chart:dimensions>
                                                     <data:Dimension name="__id" label="Day" role="category" textProperty="Day"/>
                                                 </chart:dimensions>
                                                 <chart:measures>
-                                                    <data:Measure name="Total Time Automized" label="Total Time Automized in %" role="axis2"/>
+                                                    <data:Measure name="Total Time Automized" label="Total Time Automized in hours" role="axis2"/>
                                                 </chart:measures>
                                             </chart:Chart>
                                         </content>
@@ -92,14 +92,14 @@
                         <content>
                             <Panel height="auto" width="1275px" headerText="Time" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
                                 <content>
-                                    <Panel height="auto" width="1259px" headerText="Total Time Automized in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                    <Panel height="auto" width="1259px" headerText="Total Time Automized in hours" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
                                         <content>
                                             <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276726549-content-sap_m_Panel-1-content-sap_chart_LineChart-1" width="1236px" height="450px" visibleDimensions="__id" visibleMeasures="Total Time Automized" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-3-content-sap_m_Panel-1594276726549-content-sap_m_Panel-1-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
                                                 <chart:dimensions>
                                                     <data:Dimension name="__id" label="Week" role="category" textProperty="Week"/>
                                                 </chart:dimensions>
                                                 <chart:measures>
-                                                    <data:Measure name="Total Time Automized" label="Total Time Automized in %" role="axis2"/>
+                                                    <data:Measure name="Total Time Automized" label="Total Time Automized in hours" role="axis2"/>
                                                 </chart:measures>
                                             </chart:Chart>
                                         </content>
@@ -177,14 +177,14 @@
                         <content>
                             <Panel height="auto" width="1275px" headerText="Time" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
                                 <content>
-                                    <Panel height="auto" width="1259px" headerText="Total Time Automized in %" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                    <Panel height="auto" width="1259px" headerText="Total Time Automized in hours" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
                                         <content>
                                             <chart:Chart id="sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276734225-content-sap_m_Panel-1-content-sap_chart_LineChart-1" width="1236px" height="450px" visibleDimensions="__id" visibleMeasures="Total Time Saved" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_m_Panel-1593455459317-content-sap_m_IconTabBar-1594276574629-items-sap_m_IconTabFilter-5-content-sap_m_Panel-1594276734225-content-sap_m_Panel-1-content-sap_chart_LineChart-1/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
                                                 <chart:dimensions>
                                                     <data:Dimension name="__id" label="Month" role="category" textProperty="Month"/>
                                                 </chart:dimensions>
                                                 <chart:measures>
-                                                    <data:Measure name="Total Time Saved" label="Total Time Saved in %" role="axis2"/>
+                                                    <data:Measure name="Total Time Saved" label="Total Time Saved in hours" role="axis2"/>
                                                 </chart:measures>
                                             </chart:Chart>
                                         </content>
