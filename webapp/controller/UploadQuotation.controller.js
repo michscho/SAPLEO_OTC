@@ -210,7 +210,6 @@ sap.ui.define([
 
 		onChange: async function(oEvent) {
 			var oUploadCollection = oEvent.getSource();
-			console.log("HERE");
 			var data = new FormData();
         	data.append('file', oEvent.getParameter('files')[0], oEvent.getParameter('files')[0].fileName);
         	data.append("options", JSON.stringify(jsonData));
