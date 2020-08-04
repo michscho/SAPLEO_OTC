@@ -1,9 +1,12 @@
 /**
+ * 1.1.9.2 - baseUrl
  * TOKEN DATA
  * Url with Params
  */
 var baseUrl = "https://otc.authentication.eu10.hana.ondemand.com/oauth/token?grant_type=client_credentials";
+
 /**
+ * 1.1.9.3 - config 
  * SAP Client ID to verify our requests.
  */
 var clientID = "sb-409d575f-6af5-42d2-9e77-6f92b0e702d3!b50035|na-9e50499f-78dd-40ca-ad8d-60acf02cff8b!b30417";
@@ -12,7 +15,7 @@ var responseType = "token";
 var contentType = "application";
 
 /**
- * CLIENT DATA
+ * 1.1.9.4 - Client data
  * Configure Url and body to send
  * More information: https://aiservices-trial-dox.cfapps.eu10.hana.ondemand.com/document-information-extraction/v1
  */
@@ -25,13 +28,14 @@ var body = {
 };
 
 /**
+ * 1.1.9.5 - Client data
  * JOBS DATA
  * More information: https://aiservices-trial-dox.cfapps.eu10.hana.ondemand.com/document-information-extraction/v1
  */
 var jobsUrl = "https://aiservices-trial-dox.cfapps.eu10.hana.ondemand.com/document-information-extraction/v1/document/jobs";
 
 /**
- * 1.1.9.1 - getToken
+ * 1.1.9.6 - getToken
  * SAP needs Token which are valid for 24 hours to make requests.
  * After 24 hours we needs to refresh them.
  */
@@ -54,6 +58,7 @@ async function getToken() {
 }
 
 /**
+ * 1.1.9.7 - createClient
  * Normally you need to create Clients and get them
  * In trial we only can create one Client
  */
@@ -71,6 +76,7 @@ async function createClient() {
 }
 
 /**
+ * 1.1.9.10 - getToken
  * Get a list of 10 clients
  */
 async function getAllClients() {
@@ -85,6 +91,10 @@ async function getAllClients() {
 	});
 }
 
+/**
+ * 1.1.9.11 - MainPage
+ * MainPage with Filters, tables, diagram
+ */
 sap.ui.define([
 		"sap/ui/core/mvc/Controller",
 		"sap/m/MessageBox",
@@ -92,7 +102,6 @@ sap.ui.define([
 		"sap/ui/core/routing/History",
 	], function (BaseController, MessageBox, Utilities, History) {
 		"use strict";
-		console.log("HERE");
 		getAllClients();
 		return BaseController.extend("com.sap.build.standard.otcOptimization.controller.MainPage", {
 			handleRouteMatched: function (oEvent) {
@@ -129,6 +138,10 @@ sap.ui.define([
 					this.getView().bindObject(oPath);
 				}
 			},
+			/**
+	    	* 1.1.9.12 - MainPage
+		    * Filter oModel on Page Header
+	    	*/
 			_onFioriAnalyticalListPageHeaderActionsSelectionChange: function (oEvent) {
 				var oModel = this.getView().getModel("alpModel");
 				var item = oEvent.getParameters();
@@ -137,16 +150,28 @@ sap.ui.define([
 					oModel.setProperty("/filterHeaderOption", key);
 				}
 			},
+			/**
+	    	* 1.1.9.13 - MainPage
+		    * Filter oModel on Property key
+	    	*/
 			_onFioriAnalyticalListPageHeaderActionsPress: function (oEvent) {
 				var oModel = this.getView().getModel("alpModel");
 				var key = oEvent.getSource().getProperty("key");
 				oModel.setProperty("/filterHeaderOption", key);
 			},
+			/**
+	    	* 1.1.9.14 - MainPage
+		    * Filter oModel on Property key
+	    	*/
 			_onFioriAnalyticalListPageHeaderActionsPress1: function (oEvent) {
 				var oModel = this.getView().getModel("alpModel");
 				var key = oEvent.getSource().getProperty("key");
 				oModel.setProperty("/filterHeaderOption", key);
 			},
+			/**
+	    	* 1.1.9.15 - MainPage
+		    * Navigate to MainPage
+	    	*/
 			_onButtonPress: function (oEvent) {
 				var oBindingContext = oEvent.getSource().getBindingContext();
 				return new Promise(function (fnResolve) {
@@ -157,6 +182,10 @@ sap.ui.define([
 					}
 				});
 			},
+			/**
+	    	* 1.1.9.16 - MainPage
+		    * Implementation of oRouter
+	    	*/
 			doNavigate: function (sRouteName, oBindingContext, fnPromiseResolve, sViaRelation) {
 				var sPath = oBindingContext ? oBindingContext.getPath() : null;
 				var oModel = oBindingContext ? oBindingContext.getModel() : null;
@@ -207,6 +236,10 @@ sap.ui.define([
 					fnPromiseResolve();
 				}
 			},
+		    /**
+	    	* 1.1.9.17 - MainPage
+		    * Filter oModel on Property key
+	    	*/
 			_onFioriAnalyticalListPageContentActionsSelectionChange: function (oEvent) {
 				var oModel = this.getView().getModel("alpModel");
 				var item = oEvent.getParameters();
@@ -215,24 +248,40 @@ sap.ui.define([
 					oModel.setProperty("/contentView", key);
 				}
 			},
+			/**
+	    	* 1.1.9.18 - MainPage
+		    * Filter oModel on Property key
+	    	*/
 			_onFioriAnalyticalListPageContentActionsPress: function (oEvent) {
 				var oModel = this.getView().getModel("alpModel");
 				var oSource = oEvent.getSource();
 				var key = oEvent.getSource().getProperty("key");
 				oModel.setProperty("/contentView", key);
 			},
+			/**
+	    	* 1.1.9.19 - MainPage
+		    * Filter oModel on Property key
+	    	*/
 			_onFioriAnalyticalListPageContentActionsPress1: function (oEvent) {
 				var oModel = this.getView().getModel("alpModel");
 				var oSource = oEvent.getSource();
 				var key = oEvent.getSource().getProperty("key");
 				oModel.setProperty("/contentView", key);
 			},
+			/**
+	    	* 1.1.9.20 - MainPage
+		    * Filter oModel on Property key
+	    	*/
 			_onFioriAnalyticalListPageContentActionsPress2: function (oEvent) {
 				var oModel = this.getView().getModel("alpModel");
 				var oSource = oEvent.getSource();
 				var key = oEvent.getSource().getProperty("key");
 				oModel.setProperty("/contentView", key);
 			},
+			/**
+	    	* 1.1.9.21 - MainPage
+		    * Filter on Chart Press
+	    	*/
 			_onFioriAnalyticalListPageChartContainerPress: function (oEvent) {
 				var oSource = oEvent.getSource();
 				var oModel = this.getView().getModel("alpModel");
@@ -247,6 +296,10 @@ sap.ui.define([
 					}
 				}
 			},
+			/**
+	    	* 1.1.9.22 - MainPage
+		    * Filter on Chart Press
+	    	*/
 			_onFioriAnalyticalListPageChartContainerPress1: function (oEvent) {
 				var oSource = oEvent.getSource();
 				var oChartContainer = oSource.getParent().getParent();
@@ -260,6 +313,10 @@ sap.ui.define([
 					}
 				}
 			},
+			/**
+	    	* 1.1.9.23 - MainPage
+		    * Filter on Chart Press
+	    	*/
 			_onFioriAnalyticalListPageChartContainerPress2: function (oEvent) {
 				var oSource = oEvent.getSource();
 				var oChartContainer = oSource.getParent().getParent();
@@ -273,12 +330,21 @@ sap.ui.define([
 					}
 				}
 			},
+			/**
+	    	* 1.1.9.24 - MainPage
+		    * To Fullscreen
+	    	*/
 			formatFullscreenIconAnalyticalControl: function (bExitFullscreen) {
 				if (bExitFullscreen) {
 					return "sap-icon://exit-full-screen";
 				}
 				return "sap-icon://full-screen";
 			},
+			/**
+	    	* 1.1.9.25 - MainPage
+		    * Filter on Chart Press
+		    * FullScreenOption, Dialog, VBox Aggregation
+	    	*/
 			_onFioriAnalyticalListPageChartContainerPress3: function (oEvent) {
 				var oModel = this.getView().getModel("alpModel");
 				var oSource = oEvent.getSource();
@@ -312,6 +378,11 @@ sap.ui.define([
 					oDialog.close();
 				}
 			},
+			/**
+	    	* 1.1.9.26 - MainPage
+		    * Filter on Chart Press
+		    * FullScreenOption, Dialog, VBox Aggregation
+	    	*/
 			_onFioriAnalyticalListPageTablePress: function (oEvent) {
 				var oModel = this.getView().getModel("alpModel");
 				var oSource = oEvent.getSource();
@@ -345,6 +416,10 @@ sap.ui.define([
 					oDialog.close();
 				}
 			},
+			/**
+	    	* 1.1.9.27 - MainPage
+		    * Navigation
+	    	*/
 			_onButtonPress1: function (oEvent) {
 				var oBindingContext = oEvent.getSource().getBindingContext();
 				return new Promise(function (fnResolve) {
@@ -355,6 +430,10 @@ sap.ui.define([
 					}
 				});
 			},
+				/**
+	    	* 1.1.9.28 - MainPage
+		    * Navigation to UploadQuoation
+	    	*/
 			_onOverflowToolbarButtonPress: function (oEvent) {
 				var oBindingContext = oEvent.getSource().getBindingContext();
 				return new Promise(function (fnResolve) {
@@ -365,6 +444,10 @@ sap.ui.define([
 					}
 				});
 			},
+			/**
+	    	* 1.1.9.29 - MainPage
+		    * Navigation to OrderView
+	    	*/
 			_onRowPress: function (oEvent) {
 				var oBindingContext = oEvent.getSource().getBindingContext();
 				return new Promise(function (fnResolve) {
@@ -375,6 +458,11 @@ sap.ui.define([
 					}
 				});
 			},
+			/**
+	    	* 1.1.9.30 - MainPage
+		    * Filtering of Site
+		    * Doesn't work, needs further investigation, future work
+	    	*/
 			applyFiltersAndSorters: function (sControlId, sAggregationName, chartBindingInfo) {
 				if (chartBindingInfo) {
 					var oBindingInfo = chartBindingInfo;
@@ -392,6 +480,10 @@ sap.ui.define([
 					filters: oBindingOptions.filters
 				});
 			},
+			/**
+	    	* 1.1.9.30 - MainPage
+		    * Binding between Model
+	    	*/
 			updateBindingOptions: function (sCollectionId, oBindingData, sSourceId) {
 				this.mBindingOptions = this.mBindingOptions || {};
 				this.mBindingOptions[sCollectionId] = this.mBindingOptions[sCollectionId] || {};
@@ -426,6 +518,13 @@ sap.ui.define([
 					sorters: aSorters
 				};
 			},
+			/**
+	    	* 1.1.9.31 - MainPage
+		    * Init
+		    * GetToken, oRouter, oModel
+		    * SetProperty and setModel
+		    * Init Model
+	    	*/
 			onInit: function () {
 				getToken();
 				this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
@@ -516,8 +615,11 @@ sap.ui.define([
 					oDimension.setTextFormatter(dateDimensionFormatter);
 				});
 			},
+			/**
+	    	* 1.1.9.31 - MainPage
+		    * to destroy templates for bound aggregations when templateShareable is true on exit to prevent duplicateId issue
+	    	*/
 			onExit: function () {
-				// to destroy templates for bound aggregations when templateShareable is true on exit to prevent duplicateId issue
 				var aControls = [{
 					"controlId": "AnalyticalKpisContent",
 					"groups": ["items"]
@@ -536,6 +638,10 @@ sap.ui.define([
 					}
 				}
 			},
+			/**
+	    	* 1.1.9.31 - MainPage
+	    	* Binding View
+	    	*/
 			onAfterRendering: function () {
 				var oChart, self = this,
 					oBindingParameters = this.oBindingParameters,
