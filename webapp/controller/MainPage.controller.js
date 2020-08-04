@@ -31,8 +31,9 @@ var body = {
 var jobsUrl = "https://aiservices-trial-dox.cfapps.eu10.hana.ondemand.com/document-information-extraction/v1/document/jobs";
 
 /**
- * SAP needs Token which are valid for 24 hours to make requests
- * After 24 hours we needs to refresh them
+ * 1.1.9.1 - getToken
+ * SAP needs Token which are valid for 24 hours to make requests.
+ * After 24 hours we needs to refresh them.
  */
 async function getToken() {
 	return axios({

@@ -1,9 +1,10 @@
 /**
+ * 1.1.13.4 - Json Data
  * Configuration to what to expect from to document extraction job of SAP
  * HeaderFields to find (array)
  * LineItemsFields
  * Client to save
- * Enrichment specifies which configuration and ML to use
+ * Enrichment possible
  */
 var jsonData = {
   "extraction": {
@@ -54,6 +55,7 @@ var jsonData = {
 
 
 /**
+ * 1.1.13.2 - Post Document
  * To send a pdf to SAP Document Extraction you need to send them as form data
  * @param pdfData - Formdata with body and binary pdf
  */
@@ -79,6 +81,7 @@ async function postDocument(pdfData) {
 }
 
 /**
+ * 1.1.13.3 - Fetch Document
  * Getting response of Document with specific ID
  */
 async function fetchDocument(idDoc) {
@@ -219,6 +222,7 @@ sap.ui.define([
         	data.append('file', oEvent.getParameter('files')[0], oEvent.getParameter('files')[0].fileName);
         	data.append("options", JSON.stringify(jsonData));
         	
+        	// static fetch for testing reason
         	let a = await fetchDocument();
 
         	var documentArray = JSON.parse(JSON.stringify( a.data.extraction.headerFields));
@@ -236,6 +240,7 @@ sap.ui.define([
 			 	this.getView().bindObject(oPath);
 			 }
 			
+			// post and after it fetch
         	postDocument(data);
 			// Header Token
 			var oCustomerHeaderToken = new UploadCollectionParameter({
