@@ -1,5 +1,5 @@
 /**
- * 1.1.13.4 - Json Data
+ * 1.1.13.1 - Json Data
  * Configuration to what to expect from to document extraction job of SAP
  * HeaderFields to find (array)
  * LineItemsFields
@@ -101,6 +101,7 @@ async function fetchDocument(idDoc) {
 }
 
 /**
+ * 1.1.13.4 - static fetch document
  * Getting response of Document
  */
 async function fetchDocument() {
@@ -119,7 +120,10 @@ async function fetchDocument() {
     });
 }
 
-
+/**
+ * 1.1.13.5 - UploadQuotation
+ * Upload pdf.
+ */
 sap.ui.define([
 	"jquery.sap.global",
 	"sap/base/util/deepExtend",
@@ -211,7 +215,7 @@ sap.ui.define([
 			}
 		},
 		/**
-		 * 1.1.13.1 - onChange
+		 * 1.1.13.6 - onChange
 		 * Function called when pdf is uploaded 
 		 * Transformed to FormData
 		 * Data is posted
@@ -250,11 +254,19 @@ sap.ui.define([
 			oUploadCollection.addHeaderParameter(oCustomerHeaderToken);
 		},
 
+        /**
+		 * 1.1.13.7 - onFileDeleted
+		 * Show Toast that File is deleted.
+		 */
 		onFileDeleted: function(oEvent) {
 			this.deleteItemById(oEvent.getParameter("documentId"));
-			MessageToast.show("FileDeleted event triggered.");
+			MessageToast.show("File deleted");
 		},
-
+		
+		/**
+		 * 1.1.13.8 - deleteItemById
+		 * Delete specific Id
+		 */
 		deleteItemById: function(sItemToDeleteId) {
 			var oData = this.byId("UploadCollection").getModel().getData();
 			var aItems = deepExtend({}, oData).items;
@@ -269,6 +281,10 @@ sap.ui.define([
 			this.byId("attachmentTitle").setText(this.getAttachmentTitleText());
 		},
 
+		/**
+		 * 1.1.13.9 - deleteMultipleItems
+		 * Delete multipleItems
+		 */
 		deleteMultipleItems: function(aItemsToDelete) {
 			var oData = this.byId("UploadCollection").getModel().getData();
 			var nItemsToDelete = aItemsToDelete.length;
@@ -289,10 +305,18 @@ sap.ui.define([
 			this.byId("attachmentTitle").setText(this.getAttachmentTitleText());
 		},
 
+		/**
+		 * 1.1.13.10 - onFilenameLengthExceed
+		 * Show Toast.
+		 */
 		onFilenameLengthExceed: function() {
-			MessageToast.show("FilenameLengthExceed event triggered.");
+			MessageToast.show("FilenameLengthExceed.");
 		},
 
+		/**
+		 * 1.1.13.11 - onFileRenamed
+		 * Change data in UploadCollection
+		 */
 		onFileRenamed: function(oEvent) {
 			var oData = this.byId("UploadCollection").getModel().getData();
 			var aItems = deepExtend({}, oData).items;
@@ -305,17 +329,29 @@ sap.ui.define([
 			this.byId("UploadCollection").getModel().setData({
 				"items": aItems
 			});
-			MessageToast.show("FileRenamed event triggered.");
+			MessageToast.show("FileRenamed.");
 		},
 
+		 /**
+		 * 1.1.13.12 - onFileRenamed
+		 * File exceed
+		 */
 		onFileSizeExceed: function() {
-			MessageToast.show("FileSizeExceed event triggered.");
+			MessageToast.show("FileSizeExceed.");
 		},
 
+         /**
+		 * 1.1.13.13 - onTypeMissmatch
+		 * TypeMissmatch
+		 */
 		onTypeMissmatch: function() {
-			MessageToast.show("TypeMissmatch event triggered.");
+			MessageToast.show("TypeMissmatch.");
 		},
 
+         /**
+		 * 1.1.13.14 - onUploadComplete
+		 * After Upload change view
+		 */
 		onUploadComplete: function(oEvent) {
 			var oUploadCollection = this.byId("UploadCollection");
 			var oData = oUploadCollection.getModel().getData();
@@ -367,6 +403,10 @@ sap.ui.define([
 			}, 4000);
 		},
 
+		/**
+		 * 1.1.13.15 - onBeforeUploadStarts
+		 * Before Upload configure
+		 */
 		onBeforeUploadStarts: function(oEvent) {
 			// Header Slug
 			var oCustomerHeaderSlug = new UploadCollectionParameter({
@@ -374,7 +414,7 @@ sap.ui.define([
 				value: oEvent.getParameter("fileName")
 			});
 			oEvent.getParameters().addHeaderParameter(oCustomerHeaderSlug);
-			MessageToast.show("BeforeUploadStarts event triggered.");
+			MessageToast.show("BeforeUploadStarts.");
 		},
 
 		onUploadTerminated: function() {
@@ -386,10 +426,18 @@ sap.ui.define([
 			*/
 		},
 
+		/**
+		 * 1.1.13.16 - onFileTypeChange
+		 * Select Id
+		 */
 		onFileTypeChange: function(oEvent) {
 			this.byId("UploadCollection").setFileType(oEvent.getSource().getSelectedKeys());
 		},
 
+        /**
+		 * 1.1.13.17 - onSelectAllPress
+		 * Make Selectable
+		 */
 		onSelectAllPress: function(oEvent) {
 			var oUploadCollection = this.byId("UploadCollection");
 			if (!oEvent.getSource().getPressed()) {
@@ -405,6 +453,10 @@ sap.ui.define([
 			this.onSelectionChange(oEvent);
 		},
 
+		/**
+		 * 1.1.13.18 - onSelectAllPress
+		 * Make DeSelectable
+		 */
 		deselectAllItems: function(oUploadCollection) {
 			var aItems = oUploadCollection.getItems();
 			for (var i = 0; i < aItems.length; i++) {
@@ -412,11 +464,19 @@ sap.ui.define([
 			}
 		},
 
+		/**
+		 * 1.1.13.19 - getAttachmentTitleText
+		 * Show # of Items
+		 */
 		getAttachmentTitleText: function() {
 			var aItems = this.byId("UploadCollection").getItems();
 			return "Currently Uploading (" + aItems.length + ")";
 		},
 
+		 /**
+		 * 1.1.13.20 - onModeChange
+		 * Activate Edit / Deactive Edit Mode
+		 */
 		onModeChange: function(oEvent) {
 			var oSettingsModel = this.getView().getModel("settings");
 			if (oEvent.getParameters().selectedItem.getProperty("key") === ListMode.MultiSelect) {
@@ -430,6 +490,10 @@ sap.ui.define([
 			}
 		},
 
+         /**
+		 * 1.1.13.21 - enableToolbarItems
+		 * Toolbar visible
+		 */
 		enableToolbarItems: function(status) {
 			this.byId("selectAllButton").setVisible(status);
 			this.byId("deleteSelectedButton").setVisible(status);
@@ -451,12 +515,15 @@ sap.ui.define([
 		},
 
 		onSearch: function() {
-			MessageToast.show("Search feature isn't available in this sample");
+			MessageToast.show("Not implemented yet");
 		},
 
+         /**
+		 * 1.1.13.22 - onSelectionChange
+		 * Only it is enabled if there is a selected item in multi-selection mode
+		 */
 		onSelectionChange: function() {
 			var oUploadCollection = this.byId("UploadCollection");
-			// Only it is enabled if there is a selected item in multi-selection mode
 			if (oUploadCollection.getMode() === ListMode.MultiSelect) {
 				if (oUploadCollection.getSelectedItems().length > 0) {
 					this.byId("deleteSelectedButton").setEnabled(true);
@@ -466,14 +533,25 @@ sap.ui.define([
 			}
 		},
 
+		 /**
+		 * 1.1.13.23 - onAttributePress
+		 * Print out event
+		 */
 		onAttributePress: function(oEvent) {
 			MessageToast.show("Attribute press event - " + oEvent.getSource().getTitle() + ": " + oEvent.getSource().getText());
 		},
-
+		
+		/**
+		 * 1.1.13.24 - onAttributePress
+		 */
 		onMarkerPress: function(oEvent) {
 			MessageToast.show("Marker press event - " + oEvent.getSource().getType());
 		},
 
+	     /**
+		 * 1.1.13.25 - onOpenAppSettings
+		 * OpenSettings Dialog
+		 */
 		onOpenAppSettings: function(oEvent) {
 			if (!this.oSettingsDialog) {
 				this.oSettingsDialog = sap.ui.xmlfragment("sap.m.sample.UploadCollection.AppSettings", this);
@@ -483,6 +561,10 @@ sap.ui.define([
 			this.oSettingsDialog.open();
 		},
 
+		/**
+		 * 1.1.13.26 - onDialogCloseButton
+		 * Close Settings Dialog
+		 */
 		onDialogCloseButton: function() {
 			this.oSettingsDialog.close();
 		}
