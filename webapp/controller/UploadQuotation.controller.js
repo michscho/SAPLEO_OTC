@@ -207,7 +207,12 @@ sap.ui.define([
 				return sValue;
 			}
 		},
-
+		/**
+		 * 1.1.13.1 - onChange
+		 * Function called when pdf is uploaded 
+		 * Transformed to FormData
+		 * Data is posted
+		 */
 		onChange: async function(oEvent) {
 			var oUploadCollection = oEvent.getSource();
 			var data = new FormData();
@@ -215,24 +220,13 @@ sap.ui.define([
         	data.append("options", JSON.stringify(jsonData));
         	
         	let a = await fetchDocument();
-        	
-        	console.log("update OrderAmountSet");
-        	
-        	
-        	
-        	
+
         	var documentArray = JSON.parse(JSON.stringify( a.data.extraction.headerFields));
-			console.log("The Array at position 0 is: " + JSON.stringify(documentArray[0]));
-			
-			console.log("The order Amount Set is");
-	
-			
-			 this.sContext = "OrderDocumentSet('0000000002')";
-			
-			 var oParams = {
+			this.sContext = "OrderDocumentSet('0000000002')";
+			var oParams = {
 			 		"expand": "Sender,Receiver,Details,Payment,OrderItem"
 			 	};
-			 var oPath;
+			var oPath;
 
 			 if (this.sContext) {
 			 	oPath = {
@@ -242,11 +236,7 @@ sap.ui.define([
 			 	this.getView().bindObject(oPath);
 			 }
 			
-			
-			
-			
         	postDocument(data);
-			//console.log(data);
 			// Header Token
 			var oCustomerHeaderToken = new UploadCollectionParameter({
 				name: "x-csrf-token",
