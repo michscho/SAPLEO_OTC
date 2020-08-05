@@ -1,5 +1,5 @@
 /**
- * 1.8.2 
+ * 1.8.2 Component.js
  */
 sap.ui.define([
 	"sap/ui/core/UIComponent",

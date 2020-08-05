@@ -1,4 +1,4 @@
-<!--- 1.7.8 MainPage.view.xml // Default View, filter, table, diagram ---->
+<!-- 1.7.8 MainPage.view.xml - Default View, filter, table, diagram -->
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.f" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:smartvariants="sap.ui.comp.smartvariants" xmlns:filterbar="sap.ui.comp.filterbar" xmlns:microchart="sap.suite.ui.microchart" xmlns:chart="sap.chart" xmlns:data="sap.chart.data" controllerName="com.sap.build.standard.otcOptimization.controller.MainPage">
     <f:DynamicPage headerExpanded="true" showFooter="false" class="sapSmartTemplatesAnalyticalListPageDynamicPage sapUiSizeCompact" fitContent="true">
         <f:title>

@@ -1,4 +1,4 @@
-<!---  1.7.5 Inbox.view.xml // Email Inbox ---->
+<!--  1.7.5 Inbox.view.xml // Email Inbox -->
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.build.standard.otcOptimization.controller.Inbox">
     <Page title="Inbox" showHeader="true" showFooter="true" showNavButton="false">
         <content>

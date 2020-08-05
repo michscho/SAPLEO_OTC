@@ -1,4 +1,4 @@
-<!---  1.7.13 UploadQuotation.view.xml // View to upload PDF ---->
+<!--  1.7.13 UploadQuotation.view.xml // View to upload PDF -->
 <mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.UploadQuotation" xmlns="sap.m">
     <Page showHeader="true" title="Upload View" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
         <content>

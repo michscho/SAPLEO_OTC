@@ -1,4 +1,4 @@
-<!---  1.7.10 OverviewEmail.view.xml // Emails Details ---->
+<!--  1.7.10 OverviewEmail.view.xml // Emails Details -->
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns="sap.m" controllerName="com.sap.build.standard.otcOptimization.controller.OverviewEmail">
     <uxap:ObjectPageLayout showTitleInHeaderContent="true" showHeaderContent="true" showAnchorBar="true" subSectionLayout="TitleOnTop">
         <uxap:headerContent/>

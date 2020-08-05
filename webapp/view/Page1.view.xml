@@ -1,4 +1,4 @@
-<!---  1.7.11 Page1.view.xml // Separation of Inquiries in automatic, manual… ---->
+<!--  1.7.11 Page1.view.xml // Separation of Inquiries in automatic, manual… -->
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.build.standard.otcOptimization.controller.Page1">
 	<Page showHeader="true" title="Inquiry" showFooter="true" showNavButton="false">
 		<content>
