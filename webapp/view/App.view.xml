@@ -1,3 +1,4 @@
+<!---  1.7.1 App.view.xml // Parent View ---->
 <mvc:View
 		controllerName="com.sap.build.standard.otcOptimization.controller.App"
 		xmlns:mvc="sap.ui.core.mvc"

@@ -1,3 +1,4 @@
+<!---  1.7.7 KpiOverview.view.xml // View with KPIs described in page 18 ---->
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:chart="sap.chart" xmlns:data="sap.chart.data" controllerName="com.sap.build.standard.otcOptimization.controller.KpiOverview">
     <Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" showHeader="true" title="KPI" showFooter="true">
         <content>

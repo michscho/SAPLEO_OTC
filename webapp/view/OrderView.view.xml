@@ -1,3 +1,4 @@
+<!---  1.7.9 OrderView.view.xml // Order View, confidence, entities, data ---->
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" controllerName="com.sap.build.standard.otcOptimization.controller.OrderView">
     <uxap:ObjectPageLayout showTitleInHeaderContent="false" showHeaderContent="true" showEditHeaderButton="false" showFooter="false" class="sapUiSizeCompact">
         <uxap:headerTitle>

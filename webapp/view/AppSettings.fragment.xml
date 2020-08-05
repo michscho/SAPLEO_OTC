@@ -1,3 +1,4 @@
+<!---  1.7.2 AppSettings.fragment.xml // Settings for UploadQuotation ---->
 <core:FragmentDefinition
 	xmlns="sap.m"
 	xmlns:form="sap.ui.layout.form"

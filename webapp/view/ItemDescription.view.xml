@@ -1,3 +1,4 @@
+<!---  1.7.6 ItemDescription.view.xml // Description of Item ---->
 <mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.otcOptimization.controller.ItemDescription" xmlns:uxap="sap.uxap" xmlns="sap.m">
     <uxap:ObjectPageLayout showTitleInHeaderContent="true" showHeaderContent="true" showAnchorBar="true" subSectionLayout="TitleOnTop">
         <uxap:headerContent/>
