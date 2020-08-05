@@ -1,3 +1,5 @@
+/**
+ * 1.1.2 - BaseController.js
 /*global history */
 sap.ui.define([
 		"sap/ui/core/mvc/Controller",
@@ -7,6 +9,7 @@ sap.ui.define([
 
 		return Controller.extend("com.sap.build.standard.otcOptimization.controller.BaseController", {
 			/**
+			 * 1.1.2.1
 			 * Convenience method for accessing the router in every controller of the application.
 			 * @public
 			 * @returns {sap.ui.core.routing.Router} the router for this component
@@ -16,6 +19,7 @@ sap.ui.define([
 			},
 
 			/**
+			 * 1.1.2.2
 			 * Convenience method for getting the view model by name in every controller of the application.
 			 * @public
 			 * @param {string} sName the model name
@@ -26,6 +30,7 @@ sap.ui.define([
 			},
 
 			/**
+			 * 1.1.2.3
 			 * Convenience method for setting the view model in every controller of the application.
 			 * @public
 			 * @param {sap.ui.model.Model} oModel the model instance
@@ -37,6 +42,7 @@ sap.ui.define([
 			},
 
 			/**
+			 * 1.1.2.4
 			 * Convenience method for getting the resource bundle.
 			 * @public
 			 * @returns {sap.ui.model.resource.ResourceModel} the resourceModel of the component
@@ -46,6 +52,7 @@ sap.ui.define([
 			},
 
 			/**
+			 * 1.1.2.5
 			 * Event handler  for navigating back.
 			 * It checks if there is a history entry. If yes, history.go(-1) will happen.
 			 * If not, it will replace the current entry of the browser history with the master route.

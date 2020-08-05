@@ -549,7 +549,7 @@ sap.ui.define([
 		},
 
 	     /**
-		 * 1.1.13.25 - onOpenAppSettings
+		 * 1.1.13.25 find- onOpenAppSettings
 		 * OpenSettings Dialog
 		 */
 		onOpenAppSettings: function(oEvent) {

@@ -1,3 +1,6 @@
+/**
+ * 1.1.12 - Separation of inquires in manual, automatic, semi-automatic
+ */
 sap.ui.define([
 		"sap/ui/core/mvc/Controller",
 		"sap/m/MessageBox",
@@ -76,7 +79,7 @@ sap.ui.define([
 							} else {
 								sPath = "undefined";
 							}
-							// If the navigation is a 1-n, sPath would be "undefined" as this is not supported in Build
+							// If the navigation is a 1-n, sPath would be "undefined" 
 							if (sPath === "undefined") {
 								this.oRouter.navTo(sRouteName);
 							} else {

@@ -1,3 +1,6 @@
+/**
+ * 1.1.6 - Item Description
+ */
 sap.ui.define(["sap/ui/core/mvc/Controller",
 	"sap/m/MessageBox",
 	"./utilities",

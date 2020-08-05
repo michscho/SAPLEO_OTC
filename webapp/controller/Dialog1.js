@@ -1,3 +1,6 @@
+/**
+ * 1.1.3 - Dialog1.js
+ */
 sap.ui.define([
 	"sap/ui/base/ManagedObject",
 	"sap/m/MessageBox",
@@ -12,14 +15,23 @@ sap.ui.define([
 			this._bInit = false;
 		},
 
+		/**
+		* 1.1.3.1 - Closing the view.
+		*/
 		exit: function() {
 			delete this._oView;
 		},
 
+		/**
+		* 1.1.3.2 - Getter View
+		*/
 		getView: function() {
 			return this._oView;
 		},
 
+		/**
+		* 1.1.3.2 - Getter Control
+		*/
 		getControl: function() {
 			return this._oControl;
 		},
@@ -28,6 +40,9 @@ sap.ui.define([
 			return this._oView.getController().getOwnerComponent();
 		},
 
+		/**
+		* 1.1.3.3 - Controller
+		*/
 		open: function() {
 			var oView = this._oView;
 			var oControl = this._oControl;
@@ -51,18 +66,27 @@ sap.ui.define([
 			}
 		},
 
+		/**
+		* 1.1.3.3 - Close controller
+		*/
 		close: function() {
 			this._oControl.close();
 		},
 
+		/**
+		* 1.1.3.4 - Setting route
+		*/
 		setRouter: function(oRouter) {
 			this.oRouter = oRouter;
-
 		},
 		getBindingParameters: function() {
 			return {};
 
 		},
+		
+		/**
+		* 1.1.3.5 - Dialog
+		*/
 		onInit: function() {
 
 			this._oDialog = this.getControl();

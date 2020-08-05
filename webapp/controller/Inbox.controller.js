@@ -1,3 +1,6 @@
+/**
+ * 1.1.5 - Email Inbox
+ */
 sap.ui.define([
 		"sap/ui/core/mvc/Controller",
 		"sap/m/MessageBox",
@@ -177,7 +180,7 @@ sap.ui.define([
 							} else {
 								sPath = "undefined";
 							}
-							// If the navigation is a 1-n, sPath would be "undefined" as this is not supported in Build
+							// If the navigation is a 1-n, sPath would be "undefined" as this is not supported
 							if (sPath === "undefined") {
 								this.oRouter.navTo(sRouteName);
 							} else {

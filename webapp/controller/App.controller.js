@@ -1,3 +1,7 @@
+/**
+ * 1.1.1 - App.controller.js
+ * Parent View
+ */
 sap.ui.define([
 		"com/sap/build/standard/emailInbox/controller/BaseController",
 		"sap/ui/model/json/JSONModel",

@@ -1,3 +1,6 @@
+/**
+ * 1.1.8 - List Selector
+ */
 sap.ui.define([
         "sap/ui/base/Object"
     ], function (BaseObject) {
@@ -6,13 +9,13 @@ sap.ui.define([
         return BaseObject.extend("com.sap.build.standard.otcOptimization.model.ListSelector", {
 
             /**
+             * 1.1.8.1
              * Provides a convenience API for selecting list items. All the functions will wait until the initial load of the a List passed to the instance by the setBoundMasterList
              * function.
              * @class
              * @public
              * @alias com.sap.build.standard.otcOptimization.model.ListSelector
              */
-
             constructor : function () {
                 this._oWhenListHasBeenSet = new Promise(function (fnResolveListHasBeenSet) {
                     this._fnResolveListHasBeenSet = fnResolveListHasBeenSet;
@@ -54,6 +57,7 @@ sap.ui.define([
             },
 
             /**
+             *  1.1.8.2
              * A bound list should be passed in here. Should be done, before the list has received its initial data from the server.
              * May only be invoked once per ListSelector instance.
              * @param {sap.m.List} oList The list all the select functions will be invoked on.
@@ -66,6 +70,7 @@ sap.ui.define([
 
 
             /**
+             *  1.1.8.3
              * Tries to select and scroll to a list item with a matching binding context. If there are no items matching the binding context or the ListMode is none,
              * no selection/scrolling will happen
              * @param {string} sBindingPath the binding path matching the binding path of a list item
@@ -102,12 +107,8 @@ sap.ui.define([
                 );
             },
 
-
-            /* =========================================================== */
-            /* Convenience Functions for List Selection Change Event       */
-            /* =========================================================== */
-
             /**
+             *  1.1.8.4
              * Attaches a listener and listener function to the ListSelector's bound master list. By using
              * a promise, the listener is added, even if the list is not available when 'attachListSelectionChange'
              * is called.
@@ -124,6 +125,7 @@ sap.ui.define([
             },
 
             /**
+             * 1.1.8.5
              * Detaches a listener and listener function from the ListSelector's bound master list. By using
              * a promise, the listener is removed, even if the list is not available when 'detachListSelectionChange'
              * is called.
@@ -140,6 +142,7 @@ sap.ui.define([
             },
 
             /**
+             * 1.1.8.6
              * Removes all selections from master list.
              * Does not trigger 'selectionChange' event on master list, though.
              * @public

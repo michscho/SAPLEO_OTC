@@ -1,3 +1,6 @@
+/**
+ * 1.1.4 - Editing of Email
+ */
 sap.ui.define(["sap/ui/core/mvc/Controller",
 	"sap/m/MessageBox",
 	"./utilities",
@@ -46,6 +49,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			}
 
 		},
+		/**
+		 * 1.1.4.1 - On Editing Press
+		*/
 		_onButtonPress: function(oEvent) {
 
 			oEvent = jQuery.extend(true, {}, oEvent);
@@ -155,6 +161,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 					}
 				});
 		},
+		/**
+		 * 1.1.4.2 - Changing state
+		*/
 		handleChangeValuestate: function(requiredFieldInfo, oView) {
 			var status = true;
 			if (requiredFieldInfo) {
@@ -175,6 +184,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			return status;
 
 		},
+		/**
+		 * 1.1.4.3 - Routing
+		*/
 		doNavigate: function(sRouteName, oBindingContext, fnPromiseResolve, sViaRelation) {
 			var sPath = (oBindingContext) ? oBindingContext.getPath() : null;
 			var oModel = (oBindingContext) ? oBindingContext.getModel() : null;
@@ -229,6 +241,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			}
 
 		},
+		/**
+		 * 1.1.4.4 - Change entities
+		*/
 		_onButtonPress1: function(oEvent) {
 
 			oEvent = jQuery.extend(true, {}, oEvent);
