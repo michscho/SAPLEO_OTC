@@ -1,3 +1,6 @@
+/**
+ * 1.5.1 - Creating of oModel of Type JSON
+ */
 sap.ui.define([
 		"sap/ui/model/json/JSONModel",
 		"sap/ui/Device"

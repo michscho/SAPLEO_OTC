@@ -1,3 +1,6 @@
+/**
+ * 1.8.2 
+ */
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
@@ -19,6 +22,7 @@ sap.ui.define([
 		},
 
 		/**
+		 * 1.8.2.1
 		 * The component is initialized by UI5 automatically during the startup of the app and calls the init method once.
 		 * @public
 		 * @override
@@ -45,6 +49,10 @@ sap.ui.define([
 			this.getRouter().initialize();
 		},
 
+		/**
+		 * 1.8.2.2
+		 * The creation of content of the App and its background is init here.
+		 */
 		createContent: function() {
 			var app = new sap.m.App({
 				id: "App"
@@ -58,6 +66,10 @@ sap.ui.define([
 			return app;
 		},
 
+		/**
+		 * 1.8.2.3
+		 * Navigation with context
+		 */
 		getNavigationPropertyForNavigationWithContext: function(sEntityNameSet, targetPageName) {
 			var entityNavigations = navigationWithContext[sEntityNameSet];
 			return entityNavigations == null ? null : entityNavigations[targetPageName];
